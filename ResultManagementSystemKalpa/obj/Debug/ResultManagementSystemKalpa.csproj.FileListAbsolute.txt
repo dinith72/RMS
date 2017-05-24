@@ -53,3 +53,6 @@ C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystem
 C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
 C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
 C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.PercentageForm.resources
+C:\Users\Dyl Nesh\Documents\GitHub\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe.config
+C:\Users\Dyl Nesh\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
+C:\Users\Dyl Nesh\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
