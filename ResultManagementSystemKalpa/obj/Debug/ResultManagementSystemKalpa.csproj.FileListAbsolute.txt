@@ -53,3 +53,17 @@ C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystem
 C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
 C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
 C:\Users\Dyl Nesh\Documents\GitHub\ResultManagementSystem\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.PercentageForm.resources
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe.config
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\bin\Debug\Database81.accdb
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.pdb
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.csprojResolveAssemblyReference.cache
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmlogin.resources
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmStudents.resources
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmLecturers.resources
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmadmin.resources
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.PercentageForm.resources
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.Properties.Resources.resources
+C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.csproj.GenerateResource.Cache

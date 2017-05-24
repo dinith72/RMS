@@ -286,26 +286,22 @@ namespace ResultManagementSystemKalpa
 
         private void pictureBox6_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox6.Visible = false;
-            pictureBox5.Visible = true;
+            
         }
 
         private void pictureBox5_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox5.Visible = false;
-            pictureBox6.Visible = true;
+           
         }
 
         private void pictureBox4_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox4.Visible = false;
-            pictureBox3.Visible = true;
+          
         }
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox3.Visible = false;
-            pictureBox4.Visible = true;
+           
         }
 
        
@@ -338,10 +334,10 @@ namespace ResultManagementSystemKalpa
 
         private void addStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
+           
             panelCourses.Visible = false;
             PanelStaffAdd.Visible = false;
-            btnsubmit.Visible = true; panel3.Visible = false;
+           
             PanelStudent.Visible = true;
         }
 
@@ -398,6 +394,31 @@ namespace ResultManagementSystemKalpa
         }
 
         private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
         {
 
         }
