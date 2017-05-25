@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ResultManagementSystemKalpa
 {
@@ -46,26 +47,110 @@ namespace ResultManagementSystemKalpa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text == "k")&&(textBox2.Text=="k"))
+            Connection conObj = new Connection();
+            SqlConnection x = conObj.connect();
+            // x.Open();
+
+            // SqlConnection con = new SqlConnection(@"Data Source=desktop-vlm6ua1;Initial Catalog=RMS;Integrated Security=True");
+            //con.Open();
+
+            //Connection conObj = new Connection();
+            //conObj.connect().Open();
+            //con.Open();
+            // SqlCommand x = new SqlCommand("SELECT status FROM LOGIN", con);
+            //if (x.Equals("student"))
+            //{
+            SqlCommand sda = new SqlCommand("SELECT count(*) FROM LOGIN WHERE username='" + textBox1.Text + "' AND password='" + textBox2.Text + "'", conObj.connect());
+            SqlDataReader sdr = sda.ExecuteReader();
+
+            // SqlCommand imNo = new SqlCommand("SELECT username FROM LOGIN WHERE username='" + textBox1.Text + "'", conObj.connect());
+
+            string name = textBox1.Text;
+            char[] letters = name.ToCharArray();
+            //char[] im = name.Split('/');
+            if (letters[0].Equals('I') && letters[1].Equals('M'))
             {
-                this.Hide();
-                frmStudents frm2 = new frmStudents();
-                frm2.Show();
+                while (sdr.Read())
+                {
+                    String check = sdr.GetValue(0).ToString();
+
+                    if (check.Equals("1"))
+                    {
+                        this.Hide();
+                        frmStudents frm2 = new frmStudents();
+                        frm2.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Username or Password");
+                    }
+
+                }
+
+
+
+                sdr.Close();
+                x.Close();
             }
-            if ((textBox1.Text == "w") && (textBox2.Text == "w"))
+            if (letters[0].Equals('l') && letters[1].Equals('e'))
             {
-                this.Hide();
-                frmLecturers frm3 = new frmLecturers();
-                frm3.Show();
+                while (sdr.Read())
+                {
+                    String check = sdr.GetValue(0).ToString();
+
+                    if (check.Equals("1"))
+                    {
+                        this.Hide();
+                        frmLecturers frm3 = new frmLecturers();
+                        frm3.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Username or Password");
+                    }
+
+                }
             }
-            if ((textBox1.Text == "") && (textBox2.Text == ""))
+            if (letters[0].Equals('a') && letters[1].Equals('d'))
             {
-                this.Hide();
-                frmadmin Frm4 = new frmadmin();
-                Frm4.Show();
+                while (sdr.Read())
+                {
+                    String check = sdr.GetValue(0).ToString();
+
+                    if (check.Equals("1"))
+                    {
+                        this.Hide();
+                        frmadmin Frm4 = new frmadmin();
+                        Frm4.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Username or Password");
+                    }
+
+                }
             }
 
-            }
+            /* if ((textBox1.Text == "k")&&(textBox2.Text=="k"))
+             {
+                 this.Hide();
+                 frmStudents frm2 = new frmStudents();
+                 frm2.Show();
+             }
+             if ((textBox1.Text == "w") && (textBox2.Text == "w"))
+             {
+                 this.Hide();
+                 frmLecturers frm3 = new frmLecturers();
+                 frm3.Show();
+             }
+             if ((textBox1.Text == "") && (textBox2.Text == ""))
+             {
+                 this.Hide();
+                 frmadmin Frm4 = new frmadmin();
+                 Frm4.Show();
+             }*/
+
+        }
 
         private void textBox1_CursorChanged(object sender, EventArgs e)
         {
