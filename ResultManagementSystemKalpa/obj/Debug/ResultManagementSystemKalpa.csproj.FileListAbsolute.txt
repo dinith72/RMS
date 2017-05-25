@@ -71,3 +71,6 @@ C:\Users\kalpa wijesooriya\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\
 C:\Users\Dyl Nesh\Documents\GitHub\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe.config
 C:\Users\Dyl Nesh\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
 C:\Users\Dyl Nesh\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
+C:\Users\Najjaath Fuzzooli\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe.config
+C:\Users\Najjaath Fuzzooli\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
+C:\Users\Najjaath Fuzzooli\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
