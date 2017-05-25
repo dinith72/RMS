@@ -74,3 +74,18 @@ C:\Users\Dyl Nesh\Documents\GitHub\RMS\ResultManagementSystemKalpa\obj\Debug\Res
 C:\Users\Najjaath Fuzzooli\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe.config
 C:\Users\Najjaath Fuzzooli\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
 C:\Users\Najjaath Fuzzooli\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe.config
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.exe
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.pdb
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\bin\Debug\Database81.accdb
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.exe
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\bin\Debug\ResultManagementSystemKalpa.pdb
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.csprojResolveAssemblyReference.cache
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmlogin.resources
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmStudents.resources
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmLecturers.resources
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.frmadmin.resources
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.PercentageForm.resources
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.Properties.Resources.resources
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.Registration_Form.resources
+C:\Users\Dharshitha\RMS\ResultManagementSystemKalpa\obj\Debug\ResultManagementSystemKalpa.csproj.GenerateResource.Cache
