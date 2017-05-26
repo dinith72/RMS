@@ -63,37 +63,27 @@ namespace ResultManagementSystemKalpa
 
         private void whiteStar1_Click(object sender, EventArgs e)
         {
-            goldStar1.BringToFront();
+            
         }
 
         private void whiteStar2_Click(object sender, EventArgs e)
         {
-            goldStar1.BringToFront();
-            goldStar2.BringToFront();
+            
         }
 
         private void whiteStar3_Click(object sender, EventArgs e)
         {
-            goldStar1.BringToFront();
-            goldStar2.BringToFront();
-            goldStar3.BringToFront();
+            
         }
 
         private void whiteStar4_Click(object sender, EventArgs e)
         {
-            goldStar1.BringToFront();
-            goldStar2.BringToFront();
-            goldStar3.BringToFront();
-            goldStar4.BringToFront();
+            
         }
 
         private void whiteStar5_Click(object sender, EventArgs e)
         {
-            goldStar1.BringToFront();
-            goldStar2.BringToFront();
-            goldStar3.BringToFront();
-            goldStar4.BringToFront();
-            goldStar5.BringToFront();
+            
         }
 
         private void goldStar1_Click(object sender, EventArgs e)
@@ -134,11 +124,7 @@ namespace ResultManagementSystemKalpa
 
         private void goldStar5_Click(object sender, EventArgs e)
         {
-            goldStar1.BringToFront();
-            goldStar2.BringToFront();
-            goldStar3.BringToFront();
-            goldStar4.BringToFront();
-            whiteStar5.BringToFront();
+            
         }
 
         private void whiteStar1_MouseEnter(object sender, EventArgs e)
@@ -178,7 +164,7 @@ namespace ResultManagementSystemKalpa
 
         private void goldFAke1_MouseLeave(object sender, EventArgs e)
         {
-            goldFake2.SendToBack();
+            goldFAke1.SendToBack();
         }
 
         private void goldFake2_MouseLeave(object sender, EventArgs e)
@@ -265,6 +251,17 @@ namespace ResultManagementSystemKalpa
             this.Visible = false;
             frmlogin frm1 = new frmlogin();
             frm1.Visible = true;
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProfilePanel.BringToFront();
+        }
+
+        private void whiteStar2_MouseEnter(object sender, EventArgs e)
+        {
+            goldFAke1.BringToFront();
+            goldFake2.BringToFront();
         }
     }
 }

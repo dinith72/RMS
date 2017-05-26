@@ -186,5 +186,15 @@ namespace ResultManagementSystemKalpa
             PercentageForm frm5 = new PercentageForm();
             frm5.Visible = true;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
