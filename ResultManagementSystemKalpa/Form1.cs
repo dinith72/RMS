@@ -13,6 +13,8 @@ namespace ResultManagementSystemKalpa
 {
     public partial class frmlogin : Form
     {
+        
+        
         public frmlogin()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace ResultManagementSystemKalpa
             textBox2.Hide();
 
         }
-
+        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
@@ -37,33 +39,26 @@ namespace ResultManagementSystemKalpa
 
         }
 
-        private void btnsignin_Click(object sender, EventArgs e)
+        public void btnsignin_Click(object sender, EventArgs e)
         {
             //textBox2.Text = "Pass Word";
             //textBox1.Text = "User Name";
             panel1.Visible = true;
             btnsignin.Visible = false;
         }
-
+      
+           
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            
             Connection conObj = new Connection();
             SqlConnection x = conObj.connect();
-            // x.Open();
-
-            // SqlConnection con = new SqlConnection(@"Data Source=desktop-vlm6ua1;Initial Catalog=RMS;Integrated Security=True");
-            //con.Open();
-
-            //Connection conObj = new Connection();
-            //conObj.connect().Open();
-            //con.Open();
-            // SqlCommand x = new SqlCommand("SELECT status FROM LOGIN", con);
-            //if (x.Equals("student"))
-            //{
+            
+            
             SqlCommand sda = new SqlCommand("SELECT count(*) FROM LOGIN WHERE username='" + textBox1.Text + "' AND password='" + textBox2.Text + "'", conObj.connect());
             SqlDataReader sdr = sda.ExecuteReader();
-
-            // SqlCommand imNo = new SqlCommand("SELECT username FROM LOGIN WHERE username='" + textBox1.Text + "'", conObj.connect());
+            
 
             string name = textBox1.Text;
             char[] letters = name.ToCharArray();

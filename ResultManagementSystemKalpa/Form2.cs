@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ResultManagementSystemKalpa
 {
@@ -19,6 +20,30 @@ namespace ResultManagementSystemKalpa
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            Connection conObj = new Connection();
+            try
+            {
+                SqlDataReader myReader = null;
+                SqlCommand myCommand = new SqlCommand("select StNo,firstName,lastName,year,GPA,contactNo,email from STUDENT",
+                                                        conObj.connect());
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    lblStNo.Text = myReader["StNo"].ToString();
+                    lblFirstName.Text = myReader["firstName"].ToString();
+                    lblLastName.Text = myReader["lastName"].ToString();
+                    lblLevel.Text = myReader["year"].ToString();
+                    lblGPA.Text = myReader["GPA"].ToString(); 
+                    lblContactNo.Text = myReader["contactNo"].ToString();
+                    lblEmail.Text = myReader["email"].ToString();
+
+                }
+            }
+            catch (Exception Ex)
+            {
+             MessageBox.Show(Ex.ToString());
+            }
+
             ProfilePanel.BringToFront();
         }
 
@@ -34,7 +59,7 @@ namespace ResultManagementSystemKalpa
 
         private void labelback1_Click(object sender, EventArgs e)
         {
-           
+
 
 
             this.Hide();
@@ -63,27 +88,27 @@ namespace ResultManagementSystemKalpa
 
         private void whiteStar1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void whiteStar2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void whiteStar3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void whiteStar4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void whiteStar5_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void goldStar1_Click(object sender, EventArgs e)
@@ -124,7 +149,7 @@ namespace ResultManagementSystemKalpa
 
         private void goldStar5_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void whiteStar1_MouseEnter(object sender, EventArgs e)
@@ -263,5 +288,33 @@ namespace ResultManagementSystemKalpa
             goldFAke1.BringToFront();
             goldFake2.BringToFront();
         }
+
+        private void InquireBtn_Click(object sender, EventArgs e)
+        {
+                     
+            Connection conObj = new Connection();
+           
+            string connetionString = "Data Source = DESKTOP - VLM6UA1; Initial Catalog = RMS; Integrated Security = True; Connect Timeout = 30";
+            using (SqlConnection cnn = new SqlConnection(connetionString))
+            {
+                string sql = "insert into INQUIRY ([StNo],[firstName], [lastName],[contactNo],[email]) values(@StNo,@first,@last,@contact,@email)";
+                conObj.connect();
+                using (SqlCommand cmd = new SqlCommand(sql, conObj.connect()))
+                {
+                    frmlogin frmobj = new frmlogin();
+                    cmd.Parameters.AddWithValue("@StNo", lblStNo.Text);
+                    cmd.Parameters.AddWithValue("@first", txtFirstName.Text);
+                    cmd.Parameters.AddWithValue("@last", txtLastName.Text);
+                    cmd.Parameters.AddWithValue("@contact", txtContactNo.Text);
+                    cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Inquiry Made successfully","INQUIRY",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                }
+            }
+            
+
+        }
+        
     }
 }
