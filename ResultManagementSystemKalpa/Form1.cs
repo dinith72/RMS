@@ -13,7 +13,12 @@ namespace ResultManagementSystemKalpa
 {
     public partial class frmlogin : Form
     {
-        
+        private static  string username;
+        public static string getUsername()
+        {
+            return username;
+        }
+
         
         public frmlogin()
         {
@@ -61,8 +66,10 @@ namespace ResultManagementSystemKalpa
             
 
             string name = textBox1.Text;
+            username = name;
             char[] letters = name.ToCharArray();
             //char[] im = name.Split('/');
+
             if (letters[0].Equals('I') && letters[1].Equals('M'))
             {
                 while (sdr.Read())

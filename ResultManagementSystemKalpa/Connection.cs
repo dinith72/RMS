@@ -12,7 +12,7 @@ namespace ResultManagementSystemKalpa
         public SqlConnection con = null;
         public SqlConnection connect()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VLM6UA1;Initial Catalog=RMS;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=ASUS-PC;Initial Catalog=RMS;Integrated Security=True");
             con.Open();
             return con;
 
