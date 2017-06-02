@@ -132,16 +132,23 @@
             this.goldStar5 = new System.Windows.Forms.PictureBox();
             this.goldStar3 = new System.Windows.Forms.PictureBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.pictureBoxPrevious = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFirst = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLast = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNext = new System.Windows.Forms.PictureBox();
             this.feedbackTxt = new System.Windows.Forms.TextBox();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.comboBoxViewResultsYear = new System.Windows.Forms.ComboBox();
+            this.dataGridViewViewResultsCourse = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
+            this.ColoumnStuNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coloumnStuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coloumnResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxLevel = new System.Windows.Forms.ComboBox();
             this.ResultsPanel = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -168,8 +175,8 @@
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.comboBoxYear = new System.Windows.Forms.ComboBox();
+            this.dataGridViewAddResultsCourse = new System.Windows.Forms.DataGridView();
+            this.comboBoxAddResultsYear = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -178,7 +185,8 @@
             this.analysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.resultManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coloumnCourseId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coloumnCourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -240,9 +248,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.goldStar5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldStar3)).BeginInit();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirst)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewResultsCourse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             this.ResultsPanel.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.AddResultsPanel.SuspendLayout();
@@ -262,7 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddResultsCourse)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1372,6 +1384,10 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.pictureBoxPrevious);
+            this.tabPage8.Controls.Add(this.pictureBoxFirst);
+            this.tabPage8.Controls.Add(this.pictureBoxLast);
+            this.tabPage8.Controls.Add(this.pictureBoxNext);
             this.tabPage8.Controls.Add(this.feedbackTxt);
             this.tabPage8.Controls.Add(this.dataGridView7);
             this.tabPage8.Location = new System.Drawing.Point(4, 34);
@@ -1382,6 +1398,46 @@
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Feedbacks";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxPrevious
+            // 
+            this.pictureBoxPrevious.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPrevious.Image")));
+            this.pictureBoxPrevious.Location = new System.Drawing.Point(378, 38);
+            this.pictureBoxPrevious.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxPrevious.Name = "pictureBoxPrevious";
+            this.pictureBoxPrevious.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxPrevious.TabIndex = 94;
+            this.pictureBoxPrevious.TabStop = false;
+            // 
+            // pictureBoxFirst
+            // 
+            this.pictureBoxFirst.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFirst.Image")));
+            this.pictureBoxFirst.Location = new System.Drawing.Point(334, 38);
+            this.pictureBoxFirst.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxFirst.Name = "pictureBoxFirst";
+            this.pictureBoxFirst.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxFirst.TabIndex = 93;
+            this.pictureBoxFirst.TabStop = false;
+            // 
+            // pictureBoxLast
+            // 
+            this.pictureBoxLast.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLast.Image")));
+            this.pictureBoxLast.Location = new System.Drawing.Point(466, 38);
+            this.pictureBoxLast.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxLast.Name = "pictureBoxLast";
+            this.pictureBoxLast.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxLast.TabIndex = 92;
+            this.pictureBoxLast.TabStop = false;
+            // 
+            // pictureBoxNext
+            // 
+            this.pictureBoxNext.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNext.Image")));
+            this.pictureBoxNext.Location = new System.Drawing.Point(422, 38);
+            this.pictureBoxNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxNext.Name = "pictureBoxNext";
+            this.pictureBoxNext.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxNext.TabIndex = 91;
+            this.pictureBoxNext.TabStop = false;
             // 
             // feedbackTxt
             // 
@@ -1413,26 +1469,28 @@
             this.label15.TabIndex = 1;
             this.label15.Text = "Academic Year :";
             // 
-            // comboBox2
+            // comboBoxViewResultsYear
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(476, 52);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 33);
-            this.comboBox2.TabIndex = 0;
+            this.comboBoxViewResultsYear.FormattingEnabled = true;
+            this.comboBoxViewResultsYear.Location = new System.Drawing.Point(476, 52);
+            this.comboBoxViewResultsYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxViewResultsYear.Name = "comboBoxViewResultsYear";
+            this.comboBoxViewResultsYear.Size = new System.Drawing.Size(180, 33);
+            this.comboBoxViewResultsYear.TabIndex = 0;
+            this.comboBoxViewResultsYear.SelectedIndexChanged += new System.EventHandler(this.comboBoxViewResultsYear_SelectedIndexChanged);
             // 
-            // dataGridView10
+            // dataGridViewViewResultsCourse
             // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewViewResultsCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewViewResultsCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView10.Location = new System.Drawing.Point(34, 115);
-            this.dataGridView10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(622, 498);
-            this.dataGridView10.TabIndex = 4;
+            this.dataGridViewViewResultsCourse.Location = new System.Drawing.Point(34, 115);
+            this.dataGridViewViewResultsCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewViewResultsCourse.Name = "dataGridViewViewResultsCourse";
+            this.dataGridViewViewResultsCourse.Size = new System.Drawing.Size(622, 498);
+            this.dataGridViewViewResultsCourse.TabIndex = 4;
+            this.dataGridViewViewResultsCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViewResultsCourse_CellContentClick);
             // 
             // Column1
             // 
@@ -1448,14 +1506,33 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 260;
             // 
-            // dataGridView11
+            // dataGridViewStudents
             // 
-            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(772, 43);
-            this.dataGridView11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.Size = new System.Drawing.Size(702, 603);
-            this.dataGridView11.TabIndex = 5;
+            this.dataGridViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColoumnStuNo,
+            this.coloumnStuName,
+            this.coloumnResult});
+            this.dataGridViewStudents.Location = new System.Drawing.Point(772, 43);
+            this.dataGridViewStudents.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewStudents.Name = "dataGridViewStudents";
+            this.dataGridViewStudents.Size = new System.Drawing.Size(702, 603);
+            this.dataGridViewStudents.TabIndex = 5;
+            // 
+            // ColoumnStuNo
+            // 
+            this.ColoumnStuNo.HeaderText = "stu_number";
+            this.ColoumnStuNo.Name = "ColoumnStuNo";
+            // 
+            // coloumnStuName
+            // 
+            this.coloumnStuName.HeaderText = "Name";
+            this.coloumnStuName.Name = "coloumnStuName";
+            // 
+            // coloumnResult
+            // 
+            this.coloumnResult.HeaderText = "Result";
+            this.coloumnResult.Name = "coloumnResult";
             // 
             // Level
             // 
@@ -1467,25 +1544,27 @@
             this.Level.TabIndex = 2;
             this.Level.Text = "Level :";
             // 
-            // comboBox3
+            // comboBoxLevel
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxLevel.FormattingEnabled = true;
+            this.comboBoxLevel.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
-            "4"});
-            this.comboBox3.Location = new System.Drawing.Point(136, 48);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(94, 33);
-            this.comboBox3.TabIndex = 3;
+            "4",
+            "out"});
+            this.comboBoxLevel.Location = new System.Drawing.Point(136, 48);
+            this.comboBoxLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxLevel.Name = "comboBoxLevel";
+            this.comboBoxLevel.Size = new System.Drawing.Size(94, 33);
+            this.comboBoxLevel.TabIndex = 3;
+            this.comboBoxLevel.TextChanged += new System.EventHandler(this.comboBoxLevel_TextChanged);
             // 
             // ResultsPanel
             // 
             this.ResultsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.ResultsPanel.Controls.Add(this.dataGridView11);
             this.ResultsPanel.Controls.Add(this.groupBox4);
+            this.ResultsPanel.Controls.Add(this.dataGridViewStudents);
             this.ResultsPanel.Location = new System.Drawing.Point(0, 225);
             this.ResultsPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResultsPanel.Name = "ResultsPanel";
@@ -1494,11 +1573,11 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dataGridView10);
+            this.groupBox4.Controls.Add(this.dataGridViewViewResultsCourse);
             this.groupBox4.Controls.Add(this.Level);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.comboBox2);
-            this.groupBox4.Controls.Add(this.comboBox3);
+            this.groupBox4.Controls.Add(this.comboBoxViewResultsYear);
+            this.groupBox4.Controls.Add(this.comboBoxLevel);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(34, 32);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1778,8 +1857,8 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.dataGridView2);
-            this.groupBox7.Controls.Add(this.comboBoxYear);
+            this.groupBox7.Controls.Add(this.dataGridViewAddResultsCourse);
+            this.groupBox7.Controls.Add(this.comboBoxAddResultsYear);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(20, 28);
@@ -1791,28 +1870,32 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Choose the Course";
             // 
-            // dataGridView2
+            // dataGridViewAddResultsCourse
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(9, 125);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(460, 498);
-            this.dataGridView2.TabIndex = 5;
+            this.dataGridViewAddResultsCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddResultsCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.coloumnCourseId,
+            this.coloumnCourseName});
+            this.dataGridViewAddResultsCourse.Location = new System.Drawing.Point(9, 125);
+            this.dataGridViewAddResultsCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewAddResultsCourse.Name = "dataGridViewAddResultsCourse";
+            this.dataGridViewAddResultsCourse.Size = new System.Drawing.Size(460, 498);
+            this.dataGridViewAddResultsCourse.TabIndex = 5;
             // 
-            // comboBoxYear
+            // comboBoxAddResultsYear
             // 
-            this.comboBoxYear.FormattingEnabled = true;
-            this.comboBoxYear.Items.AddRange(new object[] {
+            this.comboBoxAddResultsYear.FormattingEnabled = true;
+            this.comboBoxAddResultsYear.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.comboBoxYear.Location = new System.Drawing.Point(98, 48);
-            this.comboBoxYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxYear.Name = "comboBoxYear";
-            this.comboBoxYear.Size = new System.Drawing.Size(96, 33);
-            this.comboBoxYear.TabIndex = 4;
+            this.comboBoxAddResultsYear.Location = new System.Drawing.Point(98, 48);
+            this.comboBoxAddResultsYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxAddResultsYear.Name = "comboBoxAddResultsYear";
+            this.comboBoxAddResultsYear.Size = new System.Drawing.Size(96, 33);
+            this.comboBoxAddResultsYear.TabIndex = 4;
+            this.comboBoxAddResultsYear.SelectedIndexChanged += new System.EventHandler(this.comboBoxAddResultsYear_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -1878,21 +1961,23 @@
             this.profileToolStripMenuItem,
             this.resultsToolStripMenuItem,
             this.analysisToolStripMenuItem,
-            this.feedbackToolStripMenuItem,
-            this.resultManagerToolStripMenuItem});
+            this.feedbackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 182);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(557, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(396, 35);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // resultManagerToolStripMenuItem
+            // coloumnCourseId
             // 
-            this.resultManagerToolStripMenuItem.Name = "resultManagerToolStripMenuItem";
-            this.resultManagerToolStripMenuItem.Size = new System.Drawing.Size(161, 29);
-            this.resultManagerToolStripMenuItem.Text = "Result Manager";
-            this.resultManagerToolStripMenuItem.Click += new System.EventHandler(this.resultManagerToolStripMenuItem_Click);
+            this.coloumnCourseId.HeaderText = "course_id";
+            this.coloumnCourseId.Name = "coloumnCourseId";
+            // 
+            // coloumnCourseName
+            // 
+            this.coloumnCourseName.HeaderText = "course name";
+            this.coloumnCourseName.Name = "coloumnCourseName";
             // 
             // frmLecturers
             // 
@@ -1900,9 +1985,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1502, 923);
+            this.Controls.Add(this.AddResultsPanel);
             this.Controls.Add(this.ResultsPanel);
             this.Controls.Add(this.ProfilePanel);
-            this.Controls.Add(this.AddResultsPanel);
             this.Controls.Add(this.FeedbackPanel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label22);
@@ -1978,9 +2063,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.goldStar3)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirst)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewResultsCourse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).EndInit();
             this.ResultsPanel.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -2003,7 +2092,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddResultsCourse)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -2034,11 +2123,11 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel FeedbackPanel;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridView dataGridView11;
+        private System.Windows.Forms.ComboBox comboBoxViewResultsYear;
+        private System.Windows.Forms.DataGridView dataGridViewViewResultsCourse;
+        private System.Windows.Forms.DataGridView dataGridViewStudents;
         private System.Windows.Forms.Label Level;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxLevel;
         private System.Windows.Forms.Panel ResultsPanel;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label22;
@@ -2060,8 +2149,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.ComboBox comboBoxYear;
+        private System.Windows.Forms.DataGridView dataGridViewAddResultsCourse;
+        private System.Windows.Forms.ComboBox comboBoxAddResultsYear;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
@@ -2159,8 +2248,16 @@
         private System.Windows.Forms.ToolStripMenuItem analysisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem resultManagerToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSpec;
+        private System.Windows.Forms.PictureBox pictureBoxPrevious;
+        private System.Windows.Forms.PictureBox pictureBoxFirst;
+        private System.Windows.Forms.PictureBox pictureBoxLast;
+        private System.Windows.Forms.PictureBox pictureBoxNext;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColoumnStuNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coloumnStuName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coloumnResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coloumnCourseId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coloumnCourseName;
     }
 }
