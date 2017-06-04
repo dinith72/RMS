@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLecturers));
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewYear4 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewYear3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelExtension = new System.Windows.Forms.Label();
@@ -80,10 +80,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewYear2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewYear1 = new System.Windows.Forms.DataGridView();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -137,7 +137,8 @@
             this.pictureBoxLast = new System.Windows.Forms.PictureBox();
             this.pictureBoxNext = new System.Windows.Forms.PictureBox();
             this.feedbackTxt = new System.Windows.Forms.TextBox();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewFbk = new System.Windows.Forms.DataGridView();
+            this.ColumnFbk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBoxViewResultsYear = new System.Windows.Forms.ComboBox();
             this.dataGridViewViewResultsCourse = new System.Windows.Forms.DataGridView();
@@ -176,6 +177,8 @@
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dataGridViewAddResultsCourse = new System.Windows.Forms.DataGridView();
+            this.coloumnCourseId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coloumnCourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxAddResultsYear = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -185,12 +188,10 @@
             this.analysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.coloumnCourseId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coloumnCourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear4)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear3)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilepic)).BeginInit();
             this.ProfilePanel.SuspendLayout();
@@ -205,8 +206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpecAdd)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.FeedbackPanel.SuspendLayout();
@@ -252,7 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirst)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLast)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNext)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFbk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewResultsCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             this.ResultsPanel.SuspendLayout();
@@ -280,7 +281,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.dataGridView9);
+            this.tabPage4.Controls.Add(this.dataGridViewYear4);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage4.Name = "tabPage4";
@@ -288,20 +289,22 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Year 4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Enter += new System.EventHandler(this.tabPage4_Enter);
             // 
-            // dataGridView9
+            // dataGridViewYear4
             // 
-            this.dataGridView9.AllowUserToOrderColumns = true;
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewYear4.AllowUserToOrderColumns = true;
+            this.dataGridViewYear4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewYear4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dataGridView9.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.RowHeadersWidth = 50;
-            this.dataGridView9.Size = new System.Drawing.Size(592, 537);
-            this.dataGridView9.TabIndex = 1;
+            this.dataGridViewYear4.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewYear4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewYear4.Name = "dataGridViewYear4";
+            this.dataGridViewYear4.RowHeadersWidth = 50;
+            this.dataGridViewYear4.Size = new System.Drawing.Size(592, 537);
+            this.dataGridViewYear4.TabIndex = 1;
+            this.dataGridViewYear4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewYear4_CellContentClick);
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -319,7 +322,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView8);
+            this.tabPage3.Controls.Add(this.dataGridViewYear3);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage3.Name = "tabPage3";
@@ -327,20 +330,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Year 3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
             // 
-            // dataGridView8
+            // dataGridViewYear3
             // 
-            this.dataGridView8.AllowUserToOrderColumns = true;
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewYear3.AllowUserToOrderColumns = true;
+            this.dataGridViewYear3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewYear3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dataGridView8.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.RowHeadersWidth = 50;
-            this.dataGridView8.Size = new System.Drawing.Size(592, 537);
-            this.dataGridView8.TabIndex = 1;
+            this.dataGridViewYear3.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewYear3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewYear3.Name = "dataGridViewYear3";
+            this.dataGridViewYear3.RowHeadersWidth = 50;
+            this.dataGridViewYear3.Size = new System.Drawing.Size(592, 537);
+            this.dataGridViewYear3.TabIndex = 1;
+            this.dataGridViewYear3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewYear3_CellContentClick);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -826,7 +831,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView6);
+            this.tabPage2.Controls.Add(this.dataGridViewYear2);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
@@ -835,20 +840,23 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Year 2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
-            // dataGridView6
+            // dataGridViewYear2
             // 
-            this.dataGridView6.AllowUserToOrderColumns = true;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewYear2.AllowUserToOrderColumns = true;
+            this.dataGridViewYear2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewYear2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dataGridView6.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowHeadersWidth = 50;
-            this.dataGridView6.Size = new System.Drawing.Size(592, 537);
-            this.dataGridView6.TabIndex = 1;
+            this.dataGridViewYear2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewYear2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewYear2.Name = "dataGridViewYear2";
+            this.dataGridViewYear2.RowHeadersWidth = 50;
+            this.dataGridViewYear2.Size = new System.Drawing.Size(592, 537);
+            this.dataGridViewYear2.TabIndex = 1;
+            this.dataGridViewYear2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewYear2_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -864,19 +872,20 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 223;
             // 
-            // dataGridView5
+            // dataGridViewYear1
             // 
-            this.dataGridView5.AllowUserToOrderColumns = true;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewYear1.AllowUserToOrderColumns = true;
+            this.dataGridViewYear1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewYear1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
             this.Course});
-            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 50;
-            this.dataGridView5.Size = new System.Drawing.Size(592, 537);
-            this.dataGridView5.TabIndex = 0;
+            this.dataGridViewYear1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewYear1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewYear1.Name = "dataGridViewYear1";
+            this.dataGridViewYear1.RowHeadersWidth = 50;
+            this.dataGridViewYear1.Size = new System.Drawing.Size(592, 537);
+            this.dataGridViewYear1.TabIndex = 0;
+            this.dataGridViewYear1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewYear1_CellContentClick);
             // 
             // Code
             // 
@@ -894,7 +903,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView5);
+            this.tabPage1.Controls.Add(this.dataGridViewYear1);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
@@ -917,6 +926,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(604, 582);
             this.tabControl1.TabIndex = 5;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // FeedbackPanel
             // 
@@ -1389,7 +1399,7 @@
             this.tabPage8.Controls.Add(this.pictureBoxLast);
             this.tabPage8.Controls.Add(this.pictureBoxNext);
             this.tabPage8.Controls.Add(this.feedbackTxt);
-            this.tabPage8.Controls.Add(this.dataGridView7);
+            this.tabPage8.Controls.Add(this.dataGridViewFbk);
             this.tabPage8.Location = new System.Drawing.Point(4, 34);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage8.Name = "tabPage8";
@@ -1408,6 +1418,7 @@
             this.pictureBoxPrevious.Size = new System.Drawing.Size(36, 37);
             this.pictureBoxPrevious.TabIndex = 94;
             this.pictureBoxPrevious.TabStop = false;
+            this.pictureBoxPrevious.Click += new System.EventHandler(this.pictureBoxPrevious_Click);
             // 
             // pictureBoxFirst
             // 
@@ -1418,6 +1429,7 @@
             this.pictureBoxFirst.Size = new System.Drawing.Size(36, 37);
             this.pictureBoxFirst.TabIndex = 93;
             this.pictureBoxFirst.TabStop = false;
+            this.pictureBoxFirst.Click += new System.EventHandler(this.pictureBoxFirst_Click);
             // 
             // pictureBoxLast
             // 
@@ -1428,6 +1440,7 @@
             this.pictureBoxLast.Size = new System.Drawing.Size(36, 37);
             this.pictureBoxLast.TabIndex = 92;
             this.pictureBoxLast.TabStop = false;
+            this.pictureBoxLast.Click += new System.EventHandler(this.pictureBoxLast_Click);
             // 
             // pictureBoxNext
             // 
@@ -1438,6 +1451,7 @@
             this.pictureBoxNext.Size = new System.Drawing.Size(36, 37);
             this.pictureBoxNext.TabIndex = 91;
             this.pictureBoxNext.TabStop = false;
+            this.pictureBoxNext.Click += new System.EventHandler(this.pictureBoxNext_Click);
             // 
             // feedbackTxt
             // 
@@ -1450,14 +1464,22 @@
             this.feedbackTxt.Size = new System.Drawing.Size(482, 406);
             this.feedbackTxt.TabIndex = 3;
             // 
-            // dataGridView7
+            // dataGridViewFbk
             // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(34, 25);
-            this.dataGridView7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(267, 486);
-            this.dataGridView7.TabIndex = 2;
+            this.dataGridViewFbk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFbk.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnFbk});
+            this.dataGridViewFbk.Location = new System.Drawing.Point(34, 25);
+            this.dataGridViewFbk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewFbk.Name = "dataGridViewFbk";
+            this.dataGridViewFbk.Size = new System.Drawing.Size(267, 486);
+            this.dataGridViewFbk.TabIndex = 2;
+            this.dataGridViewFbk.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFbk_CellContentClick);
+            // 
+            // ColumnFbk
+            // 
+            this.ColumnFbk.HeaderText = "Feedback";
+            this.ColumnFbk.Name = "ColumnFbk";
             // 
             // label15
             // 
@@ -1881,6 +1903,17 @@
             this.dataGridViewAddResultsCourse.Name = "dataGridViewAddResultsCourse";
             this.dataGridViewAddResultsCourse.Size = new System.Drawing.Size(460, 498);
             this.dataGridViewAddResultsCourse.TabIndex = 5;
+            this.dataGridViewAddResultsCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddResultsCourse_CellContentClick);
+            // 
+            // coloumnCourseId
+            // 
+            this.coloumnCourseId.HeaderText = "course_id";
+            this.coloumnCourseId.Name = "coloumnCourseId";
+            // 
+            // coloumnCourseName
+            // 
+            this.coloumnCourseName.HeaderText = "course name";
+            this.coloumnCourseName.Name = "coloumnCourseName";
             // 
             // comboBoxAddResultsYear
             // 
@@ -1969,26 +2002,16 @@
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // coloumnCourseId
-            // 
-            this.coloumnCourseId.HeaderText = "course_id";
-            this.coloumnCourseId.Name = "coloumnCourseId";
-            // 
-            // coloumnCourseName
-            // 
-            this.coloumnCourseName.HeaderText = "course name";
-            this.coloumnCourseName.Name = "coloumnCourseName";
-            // 
             // frmLecturers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1502, 923);
-            this.Controls.Add(this.AddResultsPanel);
-            this.Controls.Add(this.ResultsPanel);
-            this.Controls.Add(this.ProfilePanel);
             this.Controls.Add(this.FeedbackPanel);
+            this.Controls.Add(this.ProfilePanel);
+            this.Controls.Add(this.ResultsPanel);
+            this.Controls.Add(this.AddResultsPanel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label22);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -1998,9 +2021,9 @@
             this.Text = "Lecturer";
             this.Load += new System.EventHandler(this.frmstudents_Load);
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear4)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilepic)).EndInit();
@@ -2019,8 +2042,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpecAdd)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYear1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.FeedbackPanel.ResumeLayout(false);
@@ -2067,7 +2090,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirst)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLast)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFbk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewResultsCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).EndInit();
             this.ResultsPanel.ResumeLayout(false);
@@ -2118,7 +2141,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel ProfilePanel;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridViewYear1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel FeedbackPanel;
@@ -2160,13 +2183,13 @@
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.DataGridView dataGridView12;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.DataGridView dataGridViewYear4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.DataGridView dataGridViewYear3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dataGridViewYear2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -2215,7 +2238,7 @@
         private System.Windows.Forms.PictureBox goldStar3;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TextBox feedbackTxt;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView dataGridViewFbk;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label12;
@@ -2259,5 +2282,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn coloumnResult;
         private System.Windows.Forms.DataGridViewTextBoxColumn coloumnCourseId;
         private System.Windows.Forms.DataGridViewTextBoxColumn coloumnCourseName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFbk;
     }
 }

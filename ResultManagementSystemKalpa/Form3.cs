@@ -19,7 +19,9 @@ namespace ResultManagementSystemKalpa
     public partial class frmLecturers : Form
     {
         private string username = frmlogin.getUsername();
-        private object Filestream;
+        private DataTable dtfeedback = new DataTable();
+        private int fbkrecord = 0;
+        //private object Filestream;
 
         public frmLecturers()
         {
@@ -223,6 +225,49 @@ namespace ResultManagementSystemKalpa
         private void feedbackToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FeedbackPanel.BringToFront();
+            loadFeedbackDetails('1',dataGridViewYear1);
+
+        }
+        // load the course details to the left data grid
+        private void loadFeedbackDetails(char level , DataGridView gridview)
+        {
+            dataGridViewFbk.Rows.Clear(); // clears the rows in the right datagrid
+            feedbackTxt.Text = ""; // clear the feedback label
+            try
+            {
+                Connection con = new Connection();
+                SqlConnection x = con.connect();
+                SqlCommand cmd = new SqlCommand("select c.course_id , c.course_name " +
+                    " from courses c where c.acadamic_level =@level and c.lec_id =@id", x);
+                cmd.Parameters.Add(new SqlParameter("@id", username.ToString()));
+                cmd.Parameters.Add(new SqlParameter("@level", level.ToString()));
+                SqlDataReader rdr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("course_id");
+                dt.Columns.Add("course name");
+
+                while (rdr.Read())
+                {
+                    DataRow row = dt.NewRow();
+                    row["Course_id"] = rdr.GetValue(0);
+                    row["course Name"] = rdr.GetValue(1);
+                    dt.Rows.Add(row);
+                    int num = gridview.Rows.Add(row);
+                    foreach (DataRow drow in dt.Rows)
+                    {
+
+                        gridview.Rows[num].Cells[0].Value = drow["Course_id"].ToString();
+                        gridview.Rows[num].Cells[1].Value = drow["Course Name"].ToString();
+
+                    }
+
+                }
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.Message);
+            }
+                
         }
 
         private void addResultsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -715,7 +760,8 @@ namespace ResultManagementSystemKalpa
 
         private void comboBoxAddResultsYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Connection con = new Connection();
+            dataGridViewAddResultsCourse.Rows.Clear();
+           Connection con = new Connection();
             SqlConnection x = con.connect();
             SqlCommand cmd = new SqlCommand("select c.course_id  , c.course_name from courses c " +
                 "where c.lec_id = @lecid and c.acadamic_level = @al",x);
@@ -745,6 +791,216 @@ namespace ResultManagementSystemKalpa
             }
             rdr.Close();
             x.Close();
+        }
+
+        private void dataGridViewAddResultsCourse_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewYear1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            loadFeedbackSummary(dataGridViewYear1);
+            
+
+        }
+
+        // this table load the summarised feedback to the datagrd on the right
+
+        private void loadFeedbackSummary(DataGridView datagrid)
+        {
+            dataGridViewFbk.Rows.Clear(); // clearing right data grid when loading different details of courses
+            dtfeedback.Clear(); // clearing the data table feedback
+            feedbackTxt.Text = ""; // clearing the feedback label 
+            try
+            {
+                feedbackTxt.Text = "";
+                Connection con = new Connection();
+                SqlConnection x = con.connect();
+                SqlCommand cmd;
+                if (datagrid.CurrentCell.ColumnIndex.ToString() == "0")
+                {
+                    cmd = new SqlCommand("select f.feedback from feedback f where f.course_id =@id", x);
+                    cmd.Parameters.Add(new SqlParameter("@id", datagrid.SelectedCells[0].Value.ToString()));
+
+
+                }
+                else
+                {
+                    cmd = new SqlCommand("select f.feedback from feedback f , courses c " +
+                        "where c.course_name like @cn and f.course_id = c.course_id", x);
+                    cmd.Parameters.Add(new SqlParameter("@cn", datagrid.SelectedCells[0].Value.ToString()));
+
+                }
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                // only if there isnt new row a new row is created
+                if (dtfeedback.Columns.Count == 0)
+                    dtfeedback.Columns.Add("feedback");
+                while (rdr.Read())
+                {
+                    DataRow dr = dtfeedback.NewRow();
+                    dr["feedback"] = rdr.GetValue(0);
+                    dtfeedback.Rows.Add(dr);
+                    int num = dataGridViewFbk.Rows.Add(dr);
+
+                    foreach (DataRow drow in dtfeedback.Rows)
+                    {
+                        dataGridViewFbk.Rows[num].Cells[0].Value = dr["feedback"].ToString();
+
+                    }
+                }
+                feedbackTxt.Text = dtfeedback.Rows[0].ItemArray[0].ToString();
+                pictureBoxFirst.Hide();
+                pictureBoxPrevious.Hide();
+                
+                //MessageBox.Show("row count" + dtfeedback.Rows.Count.ToString());
+                if (fbkrecord == dtfeedback.Rows.Count)
+                {
+                    pictureBoxNext.Hide();
+                    pictureBoxLast.Hide();
+                }
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.Message);
+            }
+
+        }
+    
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+            
+        {
+           // MessageBox.Show("loaded");
+            
+        }
+
+        private void tabPage2_Enter(object sender, EventArgs e)
+        {
+            
+            loadFeedbackDetails('2', dataGridViewYear2);
+
+            // to clear the course items repeatedly generating 
+            dataGridViewYear3.Rows.Clear();
+            dataGridViewYear4.Rows.Clear();
+
+
+        }
+
+        private void tabPage3_Enter(object sender, EventArgs e)
+        {
+            loadFeedbackDetails('3', dataGridViewYear3);
+
+            // to clear the course items repeatedly generating 
+            dataGridViewYear2.Rows.Clear();
+            dataGridViewYear4.Rows.Clear();
+        }
+
+        private void tabPage4_Enter(object sender, EventArgs e)
+        {
+            loadFeedbackDetails('4', dataGridViewYear4);
+
+            // to clear the course items repeatedly generating 
+            dataGridViewYear2.Rows.Clear();
+            dataGridViewYear3.Rows.Clear();
+        }
+
+        private void dataGridViewYear2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            loadFeedbackSummary(dataGridViewYear2);
+        }
+
+        private void dataGridViewYear3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            loadFeedbackSummary(dataGridViewYear3);
+        }
+
+        private void dataGridViewYear4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            loadFeedbackSummary(dataGridViewYear4);
+        }
+
+        private void dataGridViewFbk_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            pictureBoxFirst.Show();
+            pictureBoxPrevious.Show();
+            pictureBoxNext.Show();
+            pictureBoxLast.Show();
+            
+            fbkrecord = dataGridViewFbk.CurrentCell.RowIndex;
+            feedbackTxt.Text = dtfeedback.Rows[fbkrecord].ItemArray[0].ToString();
+            if (fbkrecord == 0)
+            {
+                pictureBoxFirst.Hide();
+                pictureBoxPrevious.Hide();
+            }
+           // MessageBox.Show(dtfeedback.Rows.Count.ToString());
+           if ( fbkrecord == dtfeedback.Rows.Count-1)
+            {
+                pictureBoxNext.Hide();
+                pictureBoxLast.Hide(); 
+            }
+        }
+
+        private void pictureBoxFirst_Click(object sender, EventArgs e)
+        {
+            pictureBoxFirst.Hide();
+            pictureBoxPrevious.Hide();
+            dataGridViewFbk.Rows[fbkrecord].Selected = false;
+            fbkrecord = 0;
+            feedbackTxt.Text = dtfeedback.Rows[fbkrecord].ItemArray[0].ToString();
+            pictureBoxLast.Show();
+            pictureBoxNext.Show();
+            dataGridViewFbk.Rows[0].Selected = true;
+
+
+        }
+
+        private void pictureBoxPrevious_Click(object sender, EventArgs e)
+        {
+            feedbackTxt.Text = dtfeedback.Rows[--fbkrecord].ItemArray[0].ToString();
+            pictureBoxNext.Show();
+            pictureBoxLast.Show();
+            dataGridViewFbk.Rows[fbkrecord+1].Selected = false;
+            dataGridViewFbk.Rows[fbkrecord].Selected = true;
+            if (fbkrecord == 0)
+            {
+                pictureBoxFirst.Hide();
+                pictureBoxPrevious.Hide();
+            }
+        }
+
+        private void pictureBoxNext_Click(object sender, EventArgs e)
+        {
+            feedbackTxt.Text = dtfeedback.Rows[++fbkrecord].ItemArray[0].ToString();
+            pictureBoxFirst.Show();
+            pictureBoxPrevious.Show();
+            dataGridViewFbk.Rows[fbkrecord - 1].Selected = false;
+            dataGridViewFbk.Rows[fbkrecord].Selected = true;
+            if (fbkrecord == dtfeedback.Rows.Count - 1)
+            {
+                pictureBoxNext.Hide();
+                pictureBoxLast.Hide();
+            }
+
+        }
+
+        private void pictureBoxLast_Click(object sender, EventArgs e)
+        {
+            pictureBoxFirst.Show();
+            pictureBoxPrevious.Show();
+            dataGridViewFbk.Rows[fbkrecord].Selected = false;
+            fbkrecord = dtfeedback.Rows.Count-1;
+            feedbackTxt.Text = dtfeedback.Rows[fbkrecord].ItemArray[0].ToString();
+            dataGridViewFbk.Rows[fbkrecord].Selected = true;
+            pictureBoxNext.Hide();
+            pictureBoxLast.Hide();
         }
     }
 }
