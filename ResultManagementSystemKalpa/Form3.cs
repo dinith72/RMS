@@ -226,6 +226,8 @@ namespace ResultManagementSystemKalpa
         {
             FeedbackPanel.BringToFront();
             loadFeedbackDetails('1',dataGridViewYear1);
+            //MessageBox.Show(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
+            loadRatings(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
 
         }
         // load the course details to the left data grid
@@ -801,6 +803,7 @@ namespace ResultManagementSystemKalpa
         private void dataGridViewYear1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             loadFeedbackSummary(dataGridViewYear1);
+            loadRatings(dataGridViewYear1.SelectedCells[0].Value.ToString());
             
 
         }
@@ -889,7 +892,9 @@ namespace ResultManagementSystemKalpa
             // to clear the course items repeatedly generating 
             dataGridViewYear3.Rows.Clear();
             dataGridViewYear4.Rows.Clear();
-
+            //dataGridViewYear1.Rows[0].Selected = false;
+            loadRatings(dataGridViewYear2.Rows[0].Cells[0].Value.ToString());
+            
 
         }
 
@@ -900,6 +905,9 @@ namespace ResultManagementSystemKalpa
             // to clear the course items repeatedly generating 
             dataGridViewYear2.Rows.Clear();
             dataGridViewYear4.Rows.Clear();
+            loadRatings(dataGridViewYear3.Rows[0].Cells[0].Value.ToString());
+
+
         }
 
         private void tabPage4_Enter(object sender, EventArgs e)
@@ -909,21 +917,27 @@ namespace ResultManagementSystemKalpa
             // to clear the course items repeatedly generating 
             dataGridViewYear2.Rows.Clear();
             dataGridViewYear3.Rows.Clear();
+            loadRatings(dataGridViewYear4.Rows[0].Cells[0].Value.ToString());
+
+            //pbSetZero(); 
         }
 
         private void dataGridViewYear2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             loadFeedbackSummary(dataGridViewYear2);
+            loadRatings(dataGridViewYear2.SelectedCells[0].Value.ToString());
         }
 
         private void dataGridViewYear3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             loadFeedbackSummary(dataGridViewYear3);
+            loadRatings(dataGridViewYear3.SelectedCells[0].Value.ToString());
         }
 
         private void dataGridViewYear4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             loadFeedbackSummary(dataGridViewYear4);
+            loadRatings(dataGridViewYear4.SelectedCells[0].Value.ToString());
         }
 
         private void dataGridViewFbk_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1001,6 +1015,61 @@ namespace ResultManagementSystemKalpa
             dataGridViewFbk.Rows[fbkrecord].Selected = true;
             pictureBoxNext.Hide();
             pictureBoxLast.Hide();
+        }
+
+        private void loadRatings(string cid)
+        {
+            int total = 0;
+            int[] ratings = new int [] { 0, 0, 0, 0, 0 };
+            //progressBar1.Dispose();
+            //MessageBox.Show(cid);
+            
+            Connection con = new Connection();
+            SqlConnection x = con.connect();
+            SqlCommand cmd = new SqlCommand("select count(r.rating)  from Ratings r , courses c " +
+                "where c.lec_id = 'lec' and r.course_id = @cid and " +
+                "c.course_id = r.course_id group by rating ", x);
+            cmd.Parameters.Add(new SqlParameter("@lec", username.ToString()));
+            cmd.Parameters.Add(new SqlParameter("@cid", cid.ToString()));
+
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            int j = 0;
+            while(rdr.Read())
+            {
+                ratings[j++] = (int)rdr.GetValue(0);
+               /// MessageBox.Show(ratings[j- 1].ToString());
+                total = total + (int)rdr.GetValue(0);
+                             
+            }
+            rdr.Close();
+            x.Close();
+            
+
+            showProgresbar(progressBar1, total, ratings[0]);
+            showProgresbar(progressBar2, total, ratings[1]);
+            showProgresbar(progressBar3, total, ratings[2]);
+            showProgresbar(progressBar4, total, ratings[3]);
+            showProgresbar(progressBar5, total, ratings[4]);
+
+        }
+       
+        private void showProgresbar(ProgressBar pb, int max , int count)
+        {
+            pb.Value = 0; 
+            pb.Maximum = max;
+            pb.Step = 1;
+            for (int i = 0; i < count; i++)
+                pb.PerformStep(); 
+        }
+
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            dataGridViewYear2.Rows.Clear();
+            dataGridViewYear3.Rows.Clear();
+            dataGridViewYear4.Rows.Clear();
+           
+            loadRatings(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
         }
     }
 }

@@ -912,6 +912,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Year 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // tabControl1
             // 
@@ -1573,8 +1574,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "out"});
+            "4"});
             this.comboBoxLevel.Location = new System.Drawing.Point(136, 48);
             this.comboBoxLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxLevel.Name = "comboBoxLevel";
@@ -2009,8 +2009,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1502, 923);
             this.Controls.Add(this.FeedbackPanel);
-            this.Controls.Add(this.ProfilePanel);
             this.Controls.Add(this.ResultsPanel);
+            this.Controls.Add(this.ProfilePanel);
             this.Controls.Add(this.AddResultsPanel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label22);
