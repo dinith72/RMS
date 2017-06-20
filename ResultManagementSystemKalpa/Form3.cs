@@ -67,34 +67,61 @@ namespace ResultManagementSystemKalpa
         private void loaddata()
             // this statement load data to the profile details of the user
         {
-            Connection conObj = new Connection();
-            SqlConnection x = conObj.connect();
-            SqlCommand cmd = new SqlCommand("select l.prefix ,l.first_name , l.last_name , l.contact_number, l.email , l.extension ,l.research_details ,l.specialised_areas ,l.profile_pic from lecturer l where lec_id = @lecid", conObj.connect());
-            cmd.Parameters.Add(new SqlParameter("@lecid", username.ToString()));
-            SqlDataReader sdr = cmd.ExecuteReader();
-            while (sdr.Read())
+            string research = "";
+            string specialise = "";
+            try
             {
-                labelName.Text = sdr.GetValue(0).ToString() + " " + sdr.GetValue(1).ToString() + " " + sdr.GetValue(2).ToString();
-                labelContactNo.Text = sdr.GetValue(3).ToString();
-                labelEmail.Text = sdr.GetValue(4).ToString();
-                labelExtension.Text = sdr.GetValue(5).ToString();
-                textBoxResearch.Text = sdr.GetValue(6).ToString();
-                textBoxspecialise.Text = sdr.GetValue(7).ToString();
-                // getiing the image from sql server
-                byte[] img = (byte[])sdr.GetValue(8);
-                if (img == null)
-                    pictureBoxProfilepic.Image = null;
-                else
+                
+                Connection conObj = new Connection();
+                SqlConnection x = conObj.connect();
+                SqlCommand cmd = new SqlCommand("select l.prefix ,l.first_name , l.last_name , l.contact_number, l.email , l.extension ,l.research_details ,l.specialised_areas ,l.profile_pic from lecturer l where lec_id = @lecid", conObj.connect());
+                cmd.Parameters.Add(new SqlParameter("@lecid", username.ToString()));
+                SqlDataReader sdr = cmd.ExecuteReader();
+                while (sdr.Read())
                 {
-                    MemoryStream ms = new MemoryStream(img);
-                    pictureBoxProfilepic.Image = Image.FromStream(ms);
+                    labelName.Text = sdr.GetValue(0).ToString() + " " + sdr.GetValue(1).ToString() + " " + sdr.GetValue(2).ToString();
+                    labelContactNo.Text = sdr.GetValue(3).ToString();
+                    labelEmail.Text = sdr.GetValue(4).ToString();
+                    labelExtension.Text = sdr.GetValue(5).ToString();
+                    research = sdr.GetValue(6).ToString();
+                    specialise = sdr.GetValue(7).ToString();
+                    // getiing the image from sql server
+                    pictureBoxProfilepic.Image = null;
+                    byte[] img = (byte[])sdr.GetValue(8);
+                    if (img == null)
+                        pictureBoxProfilepic.Image = null;
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBoxProfilepic.Image = Image.FromStream(ms);
+
+                    }
 
                 }
+                sdr.Close();
+                x.Close();
             }
-            sdr.Close();
-            x.Close();
+            catch (InvalidCastException c) { }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + "\n loaddata");
+
+            }
+            string[] re = research.Split(',');
+                string[] spec = specialise.Split(',');
+                foreach (string word in re)
+                {
+                    textBoxResearch.Text += System.Environment.NewLine + word;
+                }
+            foreach (string word in spec)
+            {
+                textBoxspecialise.Text +=  System.Environment.NewLine + word;
+            }
 
         }
+            
+
+        
 
         private void frmstudents_Load(object sender, EventArgs e)
         {
@@ -350,7 +377,8 @@ namespace ResultManagementSystemKalpa
                 SqlConnection x = con.connect();
                 if (x.State != ConnectionState.Open)
                     x.Open();
-                SqlCommand cmd = new SqlCommand("update lecturer set profile_pic = @img  where lec_id = 'lec'", x);
+                SqlCommand cmd = new SqlCommand("update lecturer set profile_pic = @img  where lec_id = @un", x);
+                cmd.Parameters.Add(new SqlParameter("@un", username.ToString()));
                 cmd.Parameters.Add(new SqlParameter("@img", img));
                 int temp = cmd.ExecuteNonQuery();
                 x.Close();
@@ -360,6 +388,7 @@ namespace ResultManagementSystemKalpa
             {
                 MessageBox.Show(exe.Message);
             }
+            
         }
 
         private void resultManagerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -432,7 +461,7 @@ namespace ResultManagementSystemKalpa
                 {
                     try
                     {
-                        specialisation = specialisation + "   ,   " + dataGridViewSpec.Rows[i].Cells[0].Value.ToString();
+                        specialisation = specialisation +  dataGridViewSpec.Rows[i].Cells[0].Value.ToString()  + "   ,   " ;
                         //MessageBox.Show(specialisation);
                     }
                     catch(Exception exe)
@@ -463,7 +492,7 @@ namespace ResultManagementSystemKalpa
                 {
                     try
                     {
-                        research = research + "  ,  " + dataGridViewResearch.Rows[i].Cells[0].Value.ToString();
+                        research = research + dataGridViewResearch.Rows[i].Cells[0].Value.ToString() + " , ";
                         //MessageBox.Show(specialisation);
                     }
                     catch (Exception exe)
@@ -1070,6 +1099,11 @@ namespace ResultManagementSystemKalpa
             dataGridViewYear4.Rows.Clear();
            
             loadRatings(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
+        }
+
+        private void textBoxspecialise_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

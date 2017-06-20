@@ -427,6 +427,7 @@
             this.textBoxspecialise.Name = "textBoxspecialise";
             this.textBoxspecialise.Size = new System.Drawing.Size(403, 167);
             this.textBoxspecialise.TabIndex = 65;
+            this.textBoxspecialise.TextChanged += new System.EventHandler(this.textBoxspecialise_TextChanged);
             // 
             // textBoxResearch
             // 
@@ -2008,9 +2009,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1502, 923);
-            this.Controls.Add(this.FeedbackPanel);
-            this.Controls.Add(this.ResultsPanel);
             this.Controls.Add(this.ProfilePanel);
+            this.Controls.Add(this.ResultsPanel);
+            this.Controls.Add(this.FeedbackPanel);
             this.Controls.Add(this.AddResultsPanel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label22);
