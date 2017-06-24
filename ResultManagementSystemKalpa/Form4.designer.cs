@@ -43,40 +43,40 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.pictureBox42 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBoxLecturer = new System.Windows.Forms.ComboBox();
+            this.pictureBoxprevousLec = new System.Windows.Forms.PictureBox();
+            this.pictureBoxfirstLec = new System.Windows.Forms.PictureBox();
+            this.pictureBoxlastLec = new System.Windows.Forms.PictureBox();
+            this.pictureBoxnextLec = new System.Windows.Forms.PictureBox();
+            this.dataGridCourses = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label45 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.pictureBoxDelRe = new System.Windows.Forms.PictureBox();
+            this.dataGridResearch = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textresearch = new System.Windows.Forms.TextBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.pictureBoxDelSpec = new System.Windows.Forms.PictureBox();
+            this.dataGridspecialisation = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textspec = new System.Windows.Forms.TextBox();
+            this.pictureBoxAddSpec = new System.Windows.Forms.PictureBox();
+            this.maskedTextBoxContactNo = new System.Windows.Forms.MaskedTextBox();
+            this.comboBoxTitle = new System.Windows.Forms.ComboBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnupdateLecPic = new System.Windows.Forms.Button();
             this.labelgender = new System.Windows.Forms.Label();
-            this.textemail = new System.Windows.Forms.TextBox();
+            this.textemailLec = new System.Windows.Forms.TextBox();
             this.labelemail = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.doblec = new System.Windows.Forms.DateTimePicker();
             this.imagestaff = new System.Windows.Forms.PictureBox();
             this.panelCourses = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -163,43 +163,43 @@
             this.label14 = new System.Windows.Forms.Label();
             this.InquiriesPanel = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtAmtLec = new System.Windows.Forms.TextBox();
+            this.txtAmtStu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.pictureBox43 = new System.Windows.Forms.PictureBox();
-            this.pictureBox44 = new System.Windows.Forms.PictureBox();
-            this.pictureBox45 = new System.Windows.Forms.PictureBox();
-            this.pictureBox46 = new System.Windows.Forms.PictureBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.btnStuDiscard = new System.Windows.Forms.Button();
+            this.btnStuAccept = new System.Windows.Forms.Button();
+            this.textBoxExtraStu = new System.Windows.Forms.TextBox();
+            this.pbInqStuPrevious = new System.Windows.Forms.PictureBox();
+            this.pbInqStuFirst = new System.Windows.Forms.PictureBox();
+            this.pbInqStuLast = new System.Windows.Forms.PictureBox();
+            this.pbInqStuNext = new System.Windows.Forms.PictureBox();
+            this.labelEmailStu = new System.Windows.Forms.Label();
+            this.labelContactNoStu = new System.Windows.Forms.Label();
+            this.labellnStu = new System.Windows.Forms.Label();
+            this.labelfnStu = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.pictureBox47 = new System.Windows.Forms.PictureBox();
-            this.pictureBox48 = new System.Windows.Forms.PictureBox();
-            this.pictureBox49 = new System.Windows.Forms.PictureBox();
-            this.pictureBox50 = new System.Windows.Forms.PictureBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.pbLecInqPrevious = new System.Windows.Forms.PictureBox();
+            this.pbLecInqFirst = new System.Windows.Forms.PictureBox();
+            this.pbLecInqLast = new System.Windows.Forms.PictureBox();
+            this.pbLecInqNext = new System.Windows.Forms.PictureBox();
+            this.txtLecInqSp = new System.Windows.Forms.TextBox();
+            this.txtLecInqRe = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
+            this.buttonLecInqDec = new System.Windows.Forms.Button();
+            this.buttonLecInqAccept = new System.Windows.Forms.Button();
+            this.lblLecInqEmail = new System.Windows.Forms.Label();
+            this.lblLecInqCno = new System.Windows.Forms.Label();
+            this.lblLeqInqLn = new System.Windows.Forms.Label();
+            this.lblLecInqFn = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -303,20 +303,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxprevousLec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfirstLec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlastLec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnextLec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCourses)).BeginInit();
             this.tabControl4.SuspendLayout();
             this.tabPage9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelRe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridResearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             this.tabPage10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelSpec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridspecialisation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddSpec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagestaff)).BeginInit();
             this.panelCourses.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -354,15 +354,15 @@
             this.groupBox2.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuPrevious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuFirst)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuLast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuNext)).BeginInit();
             this.tabPage12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqPrevious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqFirst)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqLast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqNext)).BeginInit();
             this.SemPanel.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -465,28 +465,27 @@
             this.txtRegNo.Name = "txtRegNo";
             this.txtRegNo.Size = new System.Drawing.Size(264, 30);
             this.txtRegNo.TabIndex = 15;
-            this.txtRegNo.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // PanelStaffAdd
             // 
             this.PanelStaffAdd.BackColor = System.Drawing.Color.Transparent;
             this.PanelStaffAdd.Controls.Add(this.pictureBox14);
             this.PanelStaffAdd.Controls.Add(this.groupBox1);
-            this.PanelStaffAdd.Controls.Add(this.dataGridView1);
+            this.PanelStaffAdd.Controls.Add(this.dataGridCourses);
             this.PanelStaffAdd.Controls.Add(this.label8);
-            this.PanelStaffAdd.Controls.Add(this.radioButton3);
-            this.PanelStaffAdd.Controls.Add(this.radioButton1);
+            this.PanelStaffAdd.Controls.Add(this.radioButtonFemale);
+            this.PanelStaffAdd.Controls.Add(this.radioButtonMale);
             this.PanelStaffAdd.Controls.Add(this.label45);
             this.PanelStaffAdd.Controls.Add(this.label7);
             this.PanelStaffAdd.Controls.Add(this.tabControl4);
-            this.PanelStaffAdd.Controls.Add(this.maskedTextBox3);
-            this.PanelStaffAdd.Controls.Add(this.comboBox1);
+            this.PanelStaffAdd.Controls.Add(this.maskedTextBoxContactNo);
+            this.PanelStaffAdd.Controls.Add(this.comboBoxTitle);
             this.PanelStaffAdd.Controls.Add(this.label43);
-            this.PanelStaffAdd.Controls.Add(this.button1);
+            this.PanelStaffAdd.Controls.Add(this.btnupdateLecPic);
             this.PanelStaffAdd.Controls.Add(this.labelgender);
-            this.PanelStaffAdd.Controls.Add(this.textemail);
+            this.PanelStaffAdd.Controls.Add(this.textemailLec);
             this.PanelStaffAdd.Controls.Add(this.labelemail);
-            this.PanelStaffAdd.Controls.Add(this.dateTimePicker1);
+            this.PanelStaffAdd.Controls.Add(this.doblec);
             this.PanelStaffAdd.Controls.Add(this.imagestaff);
             this.PanelStaffAdd.Controls.Add(this.labellname);
             this.PanelStaffAdd.Controls.Add(this.txtLastName);
@@ -520,11 +519,11 @@
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.pictureBox42);
-            this.groupBox1.Controls.Add(this.pictureBox23);
-            this.groupBox1.Controls.Add(this.pictureBox32);
-            this.groupBox1.Controls.Add(this.pictureBox25);
+            this.groupBox1.Controls.Add(this.comboBoxLecturer);
+            this.groupBox1.Controls.Add(this.pictureBoxprevousLec);
+            this.groupBox1.Controls.Add(this.pictureBoxfirstLec);
+            this.groupBox1.Controls.Add(this.pictureBoxlastLec);
+            this.groupBox1.Controls.Add(this.pictureBoxnextLec);
             this.groupBox1.Location = new System.Drawing.Point(352, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
@@ -542,6 +541,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(36, 37);
             this.pictureBox3.TabIndex = 99;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -552,6 +552,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(36, 37);
             this.pictureBox2.TabIndex = 98;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -562,71 +563,77 @@
             this.pictureBox1.Size = new System.Drawing.Size(36, 37);
             this.pictureBox1.TabIndex = 97;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // comboBox2
+            // comboBoxLecturer
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(104, 20);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 33);
-            this.comboBox2.TabIndex = 96;
+            this.comboBoxLecturer.FormattingEnabled = true;
+            this.comboBoxLecturer.Location = new System.Drawing.Point(104, 20);
+            this.comboBoxLecturer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxLecturer.Name = "comboBoxLecturer";
+            this.comboBoxLecturer.Size = new System.Drawing.Size(180, 33);
+            this.comboBoxLecturer.TabIndex = 96;
+            this.comboBoxLecturer.SelectedIndexChanged += new System.EventHandler(this.comboBoxLecturer_SelectedIndexChanged);
             // 
-            // pictureBox42
+            // pictureBoxprevousLec
             // 
-            this.pictureBox42.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox42.Image")));
-            this.pictureBox42.Location = new System.Drawing.Point(58, 20);
-            this.pictureBox42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox42.Name = "pictureBox42";
-            this.pictureBox42.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox42.TabIndex = 90;
-            this.pictureBox42.TabStop = false;
+            this.pictureBoxprevousLec.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxprevousLec.Image")));
+            this.pictureBoxprevousLec.Location = new System.Drawing.Point(58, 20);
+            this.pictureBoxprevousLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxprevousLec.Name = "pictureBoxprevousLec";
+            this.pictureBoxprevousLec.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxprevousLec.TabIndex = 90;
+            this.pictureBoxprevousLec.TabStop = false;
+            this.pictureBoxprevousLec.Click += new System.EventHandler(this.pictureBoxprevousLec_Click);
             // 
-            // pictureBox23
+            // pictureBoxfirstLec
             // 
-            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(14, 20);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox23.TabIndex = 89;
-            this.pictureBox23.TabStop = false;
+            this.pictureBoxfirstLec.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxfirstLec.Image")));
+            this.pictureBoxfirstLec.Location = new System.Drawing.Point(14, 20);
+            this.pictureBoxfirstLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxfirstLec.Name = "pictureBoxfirstLec";
+            this.pictureBoxfirstLec.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxfirstLec.TabIndex = 89;
+            this.pictureBoxfirstLec.TabStop = false;
+            this.pictureBoxfirstLec.Click += new System.EventHandler(this.pictureBoxfirstLec_Click);
             // 
-            // pictureBox32
+            // pictureBoxlastLec
             // 
-            this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.Location = new System.Drawing.Point(340, 20);
-            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox32.TabIndex = 88;
-            this.pictureBox32.TabStop = false;
+            this.pictureBoxlastLec.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxlastLec.Image")));
+            this.pictureBoxlastLec.Location = new System.Drawing.Point(340, 20);
+            this.pictureBoxlastLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxlastLec.Name = "pictureBoxlastLec";
+            this.pictureBoxlastLec.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxlastLec.TabIndex = 88;
+            this.pictureBoxlastLec.TabStop = false;
+            this.pictureBoxlastLec.Click += new System.EventHandler(this.pictureBoxlastLec_Click);
             // 
-            // pictureBox25
+            // pictureBoxnextLec
             // 
-            this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(290, 20);
-            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox25.TabIndex = 87;
-            this.pictureBox25.TabStop = false;
+            this.pictureBoxnextLec.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxnextLec.Image")));
+            this.pictureBoxnextLec.Location = new System.Drawing.Point(290, 20);
+            this.pictureBoxnextLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxnextLec.Name = "pictureBoxnextLec";
+            this.pictureBoxnextLec.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxnextLec.TabIndex = 87;
+            this.pictureBoxnextLec.TabStop = false;
+            this.pictureBoxnextLec.Click += new System.EventHandler(this.pictureBoxnextLec_Click);
             // 
-            // dataGridView1
+            // dataGridCourses
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridCourses.AllowUserToAddRows = false;
+            this.dataGridCourses.AllowUserToDeleteRows = false;
+            this.dataGridCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(682, 451);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(724, 208);
-            this.dataGridView1.TabIndex = 95;
+            this.dataGridCourses.GridColor = System.Drawing.Color.White;
+            this.dataGridCourses.Location = new System.Drawing.Point(606, 503);
+            this.dataGridCourses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridCourses.Name = "dataGridCourses";
+            this.dataGridCourses.ReadOnly = true;
+            this.dataGridCourses.Size = new System.Drawing.Size(724, 208);
+            this.dataGridCourses.TabIndex = 95;
             // 
             // Column1
             // 
@@ -653,33 +660,33 @@
             this.label8.TabIndex = 94;
             this.label8.Text = "Course Modules for this semester :";
             // 
-            // radioButton3
+            // radioButtonFemale
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(854, 172);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(102, 29);
-            this.radioButton3.TabIndex = 93;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Female";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFemale.Location = new System.Drawing.Point(854, 172);
+            this.radioButtonFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(102, 29);
+            this.radioButtonFemale.TabIndex = 93;
+            this.radioButtonFemale.TabStop = true;
+            this.radioButtonFemale.Text = "Female";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(854, 126);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 29);
-            this.radioButton1.TabIndex = 92;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMale.Location = new System.Drawing.Point(854, 126);
+            this.radioButtonMale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(80, 29);
+            this.radioButtonMale.TabIndex = 92;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Male";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
             // 
             // label45
             // 
@@ -714,12 +721,13 @@
             this.tabControl4.SelectedIndex = 0;
             this.tabControl4.Size = new System.Drawing.Size(514, 266);
             this.tabControl4.TabIndex = 81;
+            this.tabControl4.SelectedIndexChanged += new System.EventHandler(this.tabControl4_SelectedIndexChanged);
             // 
             // tabPage9
             // 
-            this.tabPage9.Controls.Add(this.pictureBox33);
-            this.tabPage9.Controls.Add(this.dataGridView3);
-            this.tabPage9.Controls.Add(this.textBox7);
+            this.tabPage9.Controls.Add(this.pictureBoxDelRe);
+            this.tabPage9.Controls.Add(this.dataGridResearch);
+            this.tabPage9.Controls.Add(this.textresearch);
             this.tabPage9.Controls.Add(this.pictureBox36);
             this.tabPage9.Location = new System.Drawing.Point(4, 34);
             this.tabPage9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -730,27 +738,28 @@
             this.tabPage9.Text = "Research Interests";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
-            // pictureBox33
+            // pictureBoxDelRe
             // 
-            this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.Location = new System.Drawing.Point(453, 9);
-            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox33.TabIndex = 72;
-            this.pictureBox33.TabStop = false;
+            this.pictureBoxDelRe.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDelRe.Image")));
+            this.pictureBoxDelRe.Location = new System.Drawing.Point(453, 9);
+            this.pictureBoxDelRe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxDelRe.Name = "pictureBoxDelRe";
+            this.pictureBoxDelRe.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxDelRe.TabIndex = 72;
+            this.pictureBoxDelRe.TabStop = false;
+            this.pictureBoxDelRe.Click += new System.EventHandler(this.pictureBoxDelRe_Click);
             // 
-            // dataGridView3
+            // dataGridResearch
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridResearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridResearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView3.Location = new System.Drawing.Point(9, 51);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(484, 162);
-            this.dataGridView3.TabIndex = 71;
+            this.dataGridResearch.Location = new System.Drawing.Point(9, 51);
+            this.dataGridResearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridResearch.Name = "dataGridResearch";
+            this.dataGridResearch.ReadOnly = true;
+            this.dataGridResearch.Size = new System.Drawing.Size(484, 162);
+            this.dataGridResearch.TabIndex = 71;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -759,13 +768,13 @@
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 280;
             // 
-            // textBox7
+            // textresearch
             // 
-            this.textBox7.Location = new System.Drawing.Point(9, 12);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(385, 30);
-            this.textBox7.TabIndex = 70;
+            this.textresearch.Location = new System.Drawing.Point(9, 12);
+            this.textresearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textresearch.Name = "textresearch";
+            this.textresearch.Size = new System.Drawing.Size(385, 30);
+            this.textresearch.TabIndex = 70;
             // 
             // pictureBox36
             // 
@@ -776,13 +785,14 @@
             this.pictureBox36.Size = new System.Drawing.Size(36, 37);
             this.pictureBox36.TabIndex = 69;
             this.pictureBox36.TabStop = false;
+            this.pictureBox36.Click += new System.EventHandler(this.pictureBox36_Click);
             // 
             // tabPage10
             // 
-            this.tabPage10.Controls.Add(this.pictureBox34);
-            this.tabPage10.Controls.Add(this.dataGridView4);
-            this.tabPage10.Controls.Add(this.textBox8);
-            this.tabPage10.Controls.Add(this.pictureBox35);
+            this.tabPage10.Controls.Add(this.pictureBoxDelSpec);
+            this.tabPage10.Controls.Add(this.dataGridspecialisation);
+            this.tabPage10.Controls.Add(this.textspec);
+            this.tabPage10.Controls.Add(this.pictureBoxAddSpec);
             this.tabPage10.Location = new System.Drawing.Point(4, 34);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage10.Name = "tabPage10";
@@ -792,27 +802,28 @@
             this.tabPage10.Text = "Areas of Specialization";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // pictureBox34
+            // pictureBoxDelSpec
             // 
-            this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
-            this.pictureBox34.Location = new System.Drawing.Point(453, 9);
-            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox34.TabIndex = 68;
-            this.pictureBox34.TabStop = false;
+            this.pictureBoxDelSpec.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDelSpec.Image")));
+            this.pictureBoxDelSpec.Location = new System.Drawing.Point(453, 9);
+            this.pictureBoxDelSpec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxDelSpec.Name = "pictureBoxDelSpec";
+            this.pictureBoxDelSpec.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxDelSpec.TabIndex = 68;
+            this.pictureBoxDelSpec.TabStop = false;
+            this.pictureBoxDelSpec.Click += new System.EventHandler(this.pictureBoxDelSpec_Click);
             // 
-            // dataGridView4
+            // dataGridspecialisation
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridspecialisation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridspecialisation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10});
-            this.dataGridView4.Location = new System.Drawing.Point(9, 51);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.Size = new System.Drawing.Size(484, 162);
-            this.dataGridView4.TabIndex = 67;
+            this.dataGridspecialisation.Location = new System.Drawing.Point(9, 51);
+            this.dataGridspecialisation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridspecialisation.Name = "dataGridspecialisation";
+            this.dataGridspecialisation.ReadOnly = true;
+            this.dataGridspecialisation.Size = new System.Drawing.Size(484, 162);
+            this.dataGridspecialisation.TabIndex = 67;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -821,40 +832,48 @@
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 280;
             // 
-            // textBox8
+            // textspec
             // 
-            this.textBox8.Location = new System.Drawing.Point(9, 12);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(385, 30);
-            this.textBox8.TabIndex = 66;
+            this.textspec.Location = new System.Drawing.Point(9, 12);
+            this.textspec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textspec.Name = "textspec";
+            this.textspec.Size = new System.Drawing.Size(385, 30);
+            this.textspec.TabIndex = 66;
             // 
-            // pictureBox35
+            // pictureBoxAddSpec
             // 
-            this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.Location = new System.Drawing.Point(414, 9);
-            this.pictureBox35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox35.TabIndex = 65;
-            this.pictureBox35.TabStop = false;
+            this.pictureBoxAddSpec.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAddSpec.Image")));
+            this.pictureBoxAddSpec.Location = new System.Drawing.Point(414, 9);
+            this.pictureBoxAddSpec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxAddSpec.Name = "pictureBoxAddSpec";
+            this.pictureBoxAddSpec.Size = new System.Drawing.Size(36, 37);
+            this.pictureBoxAddSpec.TabIndex = 65;
+            this.pictureBoxAddSpec.TabStop = false;
+            this.pictureBoxAddSpec.Click += new System.EventHandler(this.pictureBoxAddSpec_Click);
             // 
-            // maskedTextBox3
+            // maskedTextBoxContactNo
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(854, 265);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(190, 30);
-            this.maskedTextBox3.TabIndex = 72;
+            this.maskedTextBoxContactNo.Location = new System.Drawing.Point(854, 265);
+            this.maskedTextBoxContactNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maskedTextBoxContactNo.Name = "maskedTextBoxContactNo";
+            this.maskedTextBoxContactNo.Size = new System.Drawing.Size(190, 30);
+            this.maskedTextBoxContactNo.TabIndex = 72;
+            this.maskedTextBoxContactNo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxContactNo_MaskInputRejected);
             // 
-            // comboBox1
+            // comboBoxTitle
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(318, 126);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(264, 33);
-            this.comboBox1.TabIndex = 54;
+            this.comboBoxTitle.FormattingEnabled = true;
+            this.comboBoxTitle.Items.AddRange(new object[] {
+            "Mr.",
+            "Mrs.",
+            "Ms.",
+            "Dr.",
+            "Rev."});
+            this.comboBoxTitle.Location = new System.Drawing.Point(318, 126);
+            this.comboBoxTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxTitle.Name = "comboBoxTitle";
+            this.comboBoxTitle.Size = new System.Drawing.Size(264, 33);
+            this.comboBoxTitle.TabIndex = 54;
             // 
             // label43
             // 
@@ -867,17 +886,17 @@
             this.label43.TabIndex = 53;
             this.label43.Text = "Title of the person :";
             // 
-            // button1
+            // btnupdateLecPic
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1186, 382);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 35);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Update Profile Photo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnupdateLecPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdateLecPic.Location = new System.Drawing.Point(1186, 382);
+            this.btnupdateLecPic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnupdateLecPic.Name = "btnupdateLecPic";
+            this.btnupdateLecPic.Size = new System.Drawing.Size(220, 35);
+            this.btnupdateLecPic.TabIndex = 52;
+            this.btnupdateLecPic.Text = "Update Profile Photo";
+            this.btnupdateLecPic.UseVisualStyleBackColor = true;
+            this.btnupdateLecPic.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelgender
             // 
@@ -890,15 +909,15 @@
             this.labelgender.TabIndex = 32;
             this.labelgender.Text = "Gender :";
             // 
-            // textemail
+            // textemailLec
             // 
-            this.textemail.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textemail.Location = new System.Drawing.Point(854, 311);
-            this.textemail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textemail.Name = "textemail";
-            this.textemail.Size = new System.Drawing.Size(190, 30);
-            this.textemail.TabIndex = 25;
+            this.textemailLec.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textemailLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textemailLec.Location = new System.Drawing.Point(854, 311);
+            this.textemailLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textemailLec.Name = "textemailLec";
+            this.textemailLec.Size = new System.Drawing.Size(190, 30);
+            this.textemailLec.TabIndex = 25;
             // 
             // labelemail
             // 
@@ -911,16 +930,16 @@
             this.labelemail.TabIndex = 24;
             this.labelemail.Text = "E-mail Address :";
             // 
-            // dateTimePicker1
+            // doblec
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.Info;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(854, 218);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(190, 30);
-            this.dateTimePicker1.TabIndex = 22;
+            this.doblec.CalendarMonthBackground = System.Drawing.SystemColors.Info;
+            this.doblec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doblec.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.doblec.Location = new System.Drawing.Point(854, 218);
+            this.doblec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.doblec.Name = "doblec";
+            this.doblec.Size = new System.Drawing.Size(190, 30);
+            this.doblec.TabIndex = 22;
             // 
             // imagestaff
             // 
@@ -1850,8 +1869,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtAmtLec);
+            this.groupBox2.Controls.Add(this.txtAmtStu);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1864,23 +1883,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "No. of Inquiries";
             // 
-            // textBox9
+            // txtAmtLec
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(162, 140);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(79, 30);
-            this.textBox9.TabIndex = 3;
+            this.txtAmtLec.Enabled = false;
+            this.txtAmtLec.Location = new System.Drawing.Point(162, 140);
+            this.txtAmtLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAmtLec.Name = "txtAmtLec";
+            this.txtAmtLec.Size = new System.Drawing.Size(79, 30);
+            this.txtAmtLec.TabIndex = 3;
             // 
-            // textBox6
+            // txtAmtStu
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(162, 82);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(79, 30);
-            this.textBox6.TabIndex = 2;
+            this.txtAmtStu.Enabled = false;
+            this.txtAmtStu.Location = new System.Drawing.Point(162, 82);
+            this.txtAmtStu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAmtStu.Name = "txtAmtStu";
+            this.txtAmtStu.Size = new System.Drawing.Size(79, 30);
+            this.txtAmtStu.TabIndex = 2;
             // 
             // label9
             // 
@@ -1916,17 +1935,17 @@
             // 
             // tabPage11
             // 
-            this.tabPage11.Controls.Add(this.button3);
-            this.tabPage11.Controls.Add(this.button4);
-            this.tabPage11.Controls.Add(this.textBox15);
-            this.tabPage11.Controls.Add(this.pictureBox43);
-            this.tabPage11.Controls.Add(this.pictureBox44);
-            this.tabPage11.Controls.Add(this.pictureBox45);
-            this.tabPage11.Controls.Add(this.pictureBox46);
-            this.tabPage11.Controls.Add(this.label31);
-            this.tabPage11.Controls.Add(this.label32);
-            this.tabPage11.Controls.Add(this.label29);
-            this.tabPage11.Controls.Add(this.label30);
+            this.tabPage11.Controls.Add(this.btnStuDiscard);
+            this.tabPage11.Controls.Add(this.btnStuAccept);
+            this.tabPage11.Controls.Add(this.textBoxExtraStu);
+            this.tabPage11.Controls.Add(this.pbInqStuPrevious);
+            this.tabPage11.Controls.Add(this.pbInqStuFirst);
+            this.tabPage11.Controls.Add(this.pbInqStuLast);
+            this.tabPage11.Controls.Add(this.pbInqStuNext);
+            this.tabPage11.Controls.Add(this.labelEmailStu);
+            this.tabPage11.Controls.Add(this.labelContactNoStu);
+            this.tabPage11.Controls.Add(this.labellnStu);
+            this.tabPage11.Controls.Add(this.labelfnStu);
             this.tabPage11.Controls.Add(this.label24);
             this.tabPage11.Controls.Add(this.label25);
             this.tabPage11.Controls.Add(this.label26);
@@ -1941,115 +1960,121 @@
             this.tabPage11.Text = "Students\' Inquiries";
             this.tabPage11.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnStuDiscard
             // 
-            this.button3.Location = new System.Drawing.Point(720, 171);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 46);
-            this.button3.TabIndex = 74;
-            this.button3.Text = "Discard";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnStuDiscard.Location = new System.Drawing.Point(720, 171);
+            this.btnStuDiscard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStuDiscard.Name = "btnStuDiscard";
+            this.btnStuDiscard.Size = new System.Drawing.Size(150, 46);
+            this.btnStuDiscard.TabIndex = 74;
+            this.btnStuDiscard.Text = "Discard";
+            this.btnStuDiscard.UseVisualStyleBackColor = true;
+            this.btnStuDiscard.Click += new System.EventHandler(this.btnStuDiscard_Click);
             // 
-            // button4
+            // btnStuAccept
             // 
-            this.button4.Location = new System.Drawing.Point(720, 105);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 46);
-            this.button4.TabIndex = 73;
-            this.button4.Text = "Accept";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnStuAccept.Location = new System.Drawing.Point(720, 105);
+            this.btnStuAccept.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStuAccept.Name = "btnStuAccept";
+            this.btnStuAccept.Size = new System.Drawing.Size(150, 46);
+            this.btnStuAccept.TabIndex = 73;
+            this.btnStuAccept.Text = "Accept";
+            this.btnStuAccept.UseVisualStyleBackColor = true;
+            this.btnStuAccept.Click += new System.EventHandler(this.btnStuAccept_Click);
             // 
-            // textBox15
+            // textBoxExtraStu
             // 
-            this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(94, 348);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(774, 193);
-            this.textBox15.TabIndex = 72;
+            this.textBoxExtraStu.Enabled = false;
+            this.textBoxExtraStu.Location = new System.Drawing.Point(94, 348);
+            this.textBoxExtraStu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxExtraStu.Multiline = true;
+            this.textBoxExtraStu.Name = "textBoxExtraStu";
+            this.textBoxExtraStu.Size = new System.Drawing.Size(774, 193);
+            this.textBoxExtraStu.TabIndex = 72;
             // 
-            // pictureBox43
+            // pbInqStuPrevious
             // 
-            this.pictureBox43.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox43.Image")));
-            this.pictureBox43.Location = new System.Drawing.Point(140, 45);
-            this.pictureBox43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox43.Name = "pictureBox43";
-            this.pictureBox43.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox43.TabIndex = 71;
-            this.pictureBox43.TabStop = false;
+            this.pbInqStuPrevious.Image = ((System.Drawing.Image)(resources.GetObject("pbInqStuPrevious.Image")));
+            this.pbInqStuPrevious.Location = new System.Drawing.Point(140, 45);
+            this.pbInqStuPrevious.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbInqStuPrevious.Name = "pbInqStuPrevious";
+            this.pbInqStuPrevious.Size = new System.Drawing.Size(36, 37);
+            this.pbInqStuPrevious.TabIndex = 71;
+            this.pbInqStuPrevious.TabStop = false;
+            this.pbInqStuPrevious.Click += new System.EventHandler(this.pbInqStuPrevious_Click);
             // 
-            // pictureBox44
+            // pbInqStuFirst
             // 
-            this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
-            this.pictureBox44.Location = new System.Drawing.Point(94, 45);
-            this.pictureBox44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox44.Name = "pictureBox44";
-            this.pictureBox44.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox44.TabIndex = 70;
-            this.pictureBox44.TabStop = false;
+            this.pbInqStuFirst.Image = ((System.Drawing.Image)(resources.GetObject("pbInqStuFirst.Image")));
+            this.pbInqStuFirst.Location = new System.Drawing.Point(94, 45);
+            this.pbInqStuFirst.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbInqStuFirst.Name = "pbInqStuFirst";
+            this.pbInqStuFirst.Size = new System.Drawing.Size(36, 37);
+            this.pbInqStuFirst.TabIndex = 70;
+            this.pbInqStuFirst.TabStop = false;
+            this.pbInqStuFirst.Click += new System.EventHandler(this.pbInqStuFirst_Click);
             // 
-            // pictureBox45
+            // pbInqStuLast
             // 
-            this.pictureBox45.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox45.Image")));
-            this.pictureBox45.Location = new System.Drawing.Point(236, 45);
-            this.pictureBox45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox45.Name = "pictureBox45";
-            this.pictureBox45.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox45.TabIndex = 69;
-            this.pictureBox45.TabStop = false;
+            this.pbInqStuLast.Image = ((System.Drawing.Image)(resources.GetObject("pbInqStuLast.Image")));
+            this.pbInqStuLast.Location = new System.Drawing.Point(236, 45);
+            this.pbInqStuLast.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbInqStuLast.Name = "pbInqStuLast";
+            this.pbInqStuLast.Size = new System.Drawing.Size(36, 37);
+            this.pbInqStuLast.TabIndex = 69;
+            this.pbInqStuLast.TabStop = false;
+            this.pbInqStuLast.Click += new System.EventHandler(this.pictureBox45_Click);
             // 
-            // pictureBox46
+            // pbInqStuNext
             // 
-            this.pictureBox46.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox46.Image")));
-            this.pictureBox46.Location = new System.Drawing.Point(184, 45);
-            this.pictureBox46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox46.Name = "pictureBox46";
-            this.pictureBox46.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox46.TabIndex = 68;
-            this.pictureBox46.TabStop = false;
+            this.pbInqStuNext.Image = ((System.Drawing.Image)(resources.GetObject("pbInqStuNext.Image")));
+            this.pbInqStuNext.Location = new System.Drawing.Point(184, 45);
+            this.pbInqStuNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbInqStuNext.Name = "pbInqStuNext";
+            this.pbInqStuNext.Size = new System.Drawing.Size(36, 37);
+            this.pbInqStuNext.TabIndex = 68;
+            this.pbInqStuNext.TabStop = false;
+            this.pbInqStuNext.Click += new System.EventHandler(this.pbInqStuNext_Click);
             // 
-            // label31
+            // labelEmailStu
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(352, 246);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(96, 25);
-            this.label31.TabIndex = 67;
-            this.label31.Text = "XXXXXX";
+            this.labelEmailStu.AutoSize = true;
+            this.labelEmailStu.Location = new System.Drawing.Point(352, 246);
+            this.labelEmailStu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEmailStu.Name = "labelEmailStu";
+            this.labelEmailStu.Size = new System.Drawing.Size(96, 25);
+            this.labelEmailStu.TabIndex = 67;
+            this.labelEmailStu.Text = "XXXXXX";
             // 
-            // label32
+            // labelContactNoStu
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(352, 200);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(96, 25);
-            this.label32.TabIndex = 66;
-            this.label32.Text = "XXXXXX";
+            this.labelContactNoStu.AutoSize = true;
+            this.labelContactNoStu.Location = new System.Drawing.Point(352, 200);
+            this.labelContactNoStu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelContactNoStu.Name = "labelContactNoStu";
+            this.labelContactNoStu.Size = new System.Drawing.Size(96, 25);
+            this.labelContactNoStu.TabIndex = 66;
+            this.labelContactNoStu.Text = "XXXXXX";
             // 
-            // label29
+            // labellnStu
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(352, 154);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(194, 25);
-            this.label29.TabIndex = 65;
-            this.label29.Text = "XXXXXXXXXXXXX";
+            this.labellnStu.AutoSize = true;
+            this.labellnStu.Location = new System.Drawing.Point(352, 154);
+            this.labellnStu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labellnStu.Name = "labellnStu";
+            this.labellnStu.Size = new System.Drawing.Size(194, 25);
+            this.labellnStu.TabIndex = 65;
+            this.labellnStu.Text = "XXXXXXXXXXXXX";
             // 
-            // label30
+            // labelfnStu
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(352, 108);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(96, 25);
-            this.label30.TabIndex = 64;
-            this.label30.Text = "XXXXXX";
+            this.labelfnStu.AutoSize = true;
+            this.labelfnStu.Location = new System.Drawing.Point(352, 108);
+            this.labelfnStu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelfnStu.Name = "labelfnStu";
+            this.labelfnStu.Size = new System.Drawing.Size(96, 25);
+            this.labelfnStu.TabIndex = 64;
+            this.labelfnStu.Text = "XXXXXX";
             // 
             // label24
             // 
@@ -2103,20 +2128,20 @@
             // 
             // tabPage12
             // 
-            this.tabPage12.Controls.Add(this.pictureBox47);
-            this.tabPage12.Controls.Add(this.pictureBox48);
-            this.tabPage12.Controls.Add(this.pictureBox49);
-            this.tabPage12.Controls.Add(this.pictureBox50);
-            this.tabPage12.Controls.Add(this.textBox16);
-            this.tabPage12.Controls.Add(this.textBox17);
+            this.tabPage12.Controls.Add(this.pbLecInqPrevious);
+            this.tabPage12.Controls.Add(this.pbLecInqFirst);
+            this.tabPage12.Controls.Add(this.pbLecInqLast);
+            this.tabPage12.Controls.Add(this.pbLecInqNext);
+            this.tabPage12.Controls.Add(this.txtLecInqSp);
+            this.tabPage12.Controls.Add(this.txtLecInqRe);
             this.tabPage12.Controls.Add(this.label41);
             this.tabPage12.Controls.Add(this.label42);
-            this.tabPage12.Controls.Add(this.button8);
-            this.tabPage12.Controls.Add(this.button9);
-            this.tabPage12.Controls.Add(this.label37);
-            this.tabPage12.Controls.Add(this.label38);
-            this.tabPage12.Controls.Add(this.label39);
-            this.tabPage12.Controls.Add(this.label40);
+            this.tabPage12.Controls.Add(this.buttonLecInqDec);
+            this.tabPage12.Controls.Add(this.buttonLecInqAccept);
+            this.tabPage12.Controls.Add(this.lblLecInqEmail);
+            this.tabPage12.Controls.Add(this.lblLecInqCno);
+            this.tabPage12.Controls.Add(this.lblLeqInqLn);
+            this.tabPage12.Controls.Add(this.lblLecInqFn);
             this.tabPage12.Controls.Add(this.label33);
             this.tabPage12.Controls.Add(this.label34);
             this.tabPage12.Controls.Add(this.label35);
@@ -2130,65 +2155,69 @@
             this.tabPage12.Text = "Lecturer inquiries";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
-            // pictureBox47
+            // pbLecInqPrevious
             // 
-            this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
-            this.pictureBox47.Location = new System.Drawing.Point(140, 45);
-            this.pictureBox47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox47.Name = "pictureBox47";
-            this.pictureBox47.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox47.TabIndex = 93;
-            this.pictureBox47.TabStop = false;
+            this.pbLecInqPrevious.Image = ((System.Drawing.Image)(resources.GetObject("pbLecInqPrevious.Image")));
+            this.pbLecInqPrevious.Location = new System.Drawing.Point(140, 45);
+            this.pbLecInqPrevious.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbLecInqPrevious.Name = "pbLecInqPrevious";
+            this.pbLecInqPrevious.Size = new System.Drawing.Size(36, 37);
+            this.pbLecInqPrevious.TabIndex = 93;
+            this.pbLecInqPrevious.TabStop = false;
+            this.pbLecInqPrevious.Click += new System.EventHandler(this.pbLecInqPrevious_Click);
             // 
-            // pictureBox48
+            // pbLecInqFirst
             // 
-            this.pictureBox48.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox48.Image")));
-            this.pictureBox48.Location = new System.Drawing.Point(94, 45);
-            this.pictureBox48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox48.Name = "pictureBox48";
-            this.pictureBox48.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox48.TabIndex = 92;
-            this.pictureBox48.TabStop = false;
+            this.pbLecInqFirst.Image = ((System.Drawing.Image)(resources.GetObject("pbLecInqFirst.Image")));
+            this.pbLecInqFirst.Location = new System.Drawing.Point(94, 45);
+            this.pbLecInqFirst.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbLecInqFirst.Name = "pbLecInqFirst";
+            this.pbLecInqFirst.Size = new System.Drawing.Size(36, 37);
+            this.pbLecInqFirst.TabIndex = 92;
+            this.pbLecInqFirst.TabStop = false;
+            this.pbLecInqFirst.Click += new System.EventHandler(this.pbLecInqFirst_Click);
             // 
-            // pictureBox49
+            // pbLecInqLast
             // 
-            this.pictureBox49.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox49.Image")));
-            this.pictureBox49.Location = new System.Drawing.Point(236, 45);
-            this.pictureBox49.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox49.TabIndex = 91;
-            this.pictureBox49.TabStop = false;
+            this.pbLecInqLast.Image = ((System.Drawing.Image)(resources.GetObject("pbLecInqLast.Image")));
+            this.pbLecInqLast.Location = new System.Drawing.Point(236, 45);
+            this.pbLecInqLast.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbLecInqLast.Name = "pbLecInqLast";
+            this.pbLecInqLast.Size = new System.Drawing.Size(36, 37);
+            this.pbLecInqLast.TabIndex = 91;
+            this.pbLecInqLast.TabStop = false;
+            this.pbLecInqLast.Click += new System.EventHandler(this.pbLecInqLast_Click);
             // 
-            // pictureBox50
+            // pbLecInqNext
             // 
-            this.pictureBox50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox50.Image")));
-            this.pictureBox50.Location = new System.Drawing.Point(184, 45);
-            this.pictureBox50.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox50.Name = "pictureBox50";
-            this.pictureBox50.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox50.TabIndex = 90;
-            this.pictureBox50.TabStop = false;
+            this.pbLecInqNext.Image = ((System.Drawing.Image)(resources.GetObject("pbLecInqNext.Image")));
+            this.pbLecInqNext.Location = new System.Drawing.Point(184, 45);
+            this.pbLecInqNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbLecInqNext.Name = "pbLecInqNext";
+            this.pbLecInqNext.Size = new System.Drawing.Size(36, 37);
+            this.pbLecInqNext.TabIndex = 90;
+            this.pbLecInqNext.TabStop = false;
+            this.pbLecInqNext.Click += new System.EventHandler(this.pbLecInqNext_Click);
             // 
-            // textBox16
+            // txtLecInqSp
             // 
-            this.textBox16.Enabled = false;
-            this.textBox16.Location = new System.Drawing.Point(524, 338);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(403, 167);
-            this.textBox16.TabIndex = 89;
+            this.txtLecInqSp.Enabled = false;
+            this.txtLecInqSp.Location = new System.Drawing.Point(524, 338);
+            this.txtLecInqSp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLecInqSp.Multiline = true;
+            this.txtLecInqSp.Name = "txtLecInqSp";
+            this.txtLecInqSp.Size = new System.Drawing.Size(403, 167);
+            this.txtLecInqSp.TabIndex = 89;
             // 
-            // textBox17
+            // txtLecInqRe
             // 
-            this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(94, 338);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(380, 167);
-            this.textBox17.TabIndex = 88;
+            this.txtLecInqRe.Enabled = false;
+            this.txtLecInqRe.Location = new System.Drawing.Point(94, 338);
+            this.txtLecInqRe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLecInqRe.Multiline = true;
+            this.txtLecInqRe.Name = "txtLecInqRe";
+            this.txtLecInqRe.Size = new System.Drawing.Size(380, 167);
+            this.txtLecInqRe.TabIndex = 88;
             // 
             // label41
             // 
@@ -2210,65 +2239,67 @@
             this.label42.TabIndex = 86;
             this.label42.Text = "Research Interests :";
             // 
-            // button8
+            // buttonLecInqDec
             // 
-            this.button8.Location = new System.Drawing.Point(756, 172);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 46);
-            this.button8.TabIndex = 85;
-            this.button8.Text = "Discard";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonLecInqDec.Location = new System.Drawing.Point(756, 172);
+            this.buttonLecInqDec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLecInqDec.Name = "buttonLecInqDec";
+            this.buttonLecInqDec.Size = new System.Drawing.Size(150, 46);
+            this.buttonLecInqDec.TabIndex = 85;
+            this.buttonLecInqDec.Text = "Discard";
+            this.buttonLecInqDec.UseVisualStyleBackColor = true;
+            this.buttonLecInqDec.Click += new System.EventHandler(this.buttonLecInqDec_Click);
             // 
-            // button9
+            // buttonLecInqAccept
             // 
-            this.button9.Location = new System.Drawing.Point(756, 106);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(150, 46);
-            this.button9.TabIndex = 84;
-            this.button9.Text = "Accept";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonLecInqAccept.Location = new System.Drawing.Point(756, 106);
+            this.buttonLecInqAccept.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLecInqAccept.Name = "buttonLecInqAccept";
+            this.buttonLecInqAccept.Size = new System.Drawing.Size(150, 46);
+            this.buttonLecInqAccept.TabIndex = 84;
+            this.buttonLecInqAccept.Text = "Accept";
+            this.buttonLecInqAccept.UseVisualStyleBackColor = true;
+            this.buttonLecInqAccept.Click += new System.EventHandler(this.buttonLecInqAccept_Click);
             // 
-            // label37
+            // lblLecInqEmail
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(294, 248);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(96, 25);
-            this.label37.TabIndex = 82;
-            this.label37.Text = "XXXXXX";
+            this.lblLecInqEmail.AutoSize = true;
+            this.lblLecInqEmail.Location = new System.Drawing.Point(294, 248);
+            this.lblLecInqEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLecInqEmail.Name = "lblLecInqEmail";
+            this.lblLecInqEmail.Size = new System.Drawing.Size(96, 25);
+            this.lblLecInqEmail.TabIndex = 82;
+            this.lblLecInqEmail.Text = "XXXXXX";
             // 
-            // label38
+            // lblLecInqCno
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(294, 202);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(96, 25);
-            this.label38.TabIndex = 81;
-            this.label38.Text = "XXXXXX";
+            this.lblLecInqCno.AutoSize = true;
+            this.lblLecInqCno.Location = new System.Drawing.Point(294, 202);
+            this.lblLecInqCno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLecInqCno.Name = "lblLecInqCno";
+            this.lblLecInqCno.Size = new System.Drawing.Size(96, 25);
+            this.lblLecInqCno.TabIndex = 81;
+            this.lblLecInqCno.Text = "XXXXXX";
             // 
-            // label39
+            // lblLeqInqLn
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(294, 155);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(194, 25);
-            this.label39.TabIndex = 80;
-            this.label39.Text = "XXXXXXXXXXXXX";
+            this.lblLeqInqLn.AutoSize = true;
+            this.lblLeqInqLn.Location = new System.Drawing.Point(294, 155);
+            this.lblLeqInqLn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLeqInqLn.Name = "lblLeqInqLn";
+            this.lblLeqInqLn.Size = new System.Drawing.Size(194, 25);
+            this.lblLeqInqLn.TabIndex = 80;
+            this.lblLeqInqLn.Text = "XXXXXXXXXXXXX";
             // 
-            // label40
+            // lblLecInqFn
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(294, 109);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(96, 25);
-            this.label40.TabIndex = 79;
-            this.label40.Text = "XXXXXX";
+            this.lblLecInqFn.AutoSize = true;
+            this.lblLecInqFn.Location = new System.Drawing.Point(294, 109);
+            this.lblLecInqFn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLecInqFn.Name = "lblLecInqFn";
+            this.lblLecInqFn.Size = new System.Drawing.Size(96, 25);
+            this.lblLecInqFn.TabIndex = 79;
+            this.lblLecInqFn.Text = "XXXXXX";
             // 
             // label33
             // 
@@ -3275,12 +3306,12 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1502, 923);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.InquiriesPanel);
-            this.Controls.Add(this.PanelStudent);
             this.Controls.Add(this.panelCourses);
-            this.Controls.Add(this.CriteriaPanel);
+            this.Controls.Add(this.PanelStudent);
             this.Controls.Add(this.PanelStaffAdd);
+            this.Controls.Add(this.CriteriaPanel);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.SemPanel);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -3292,7 +3323,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.frmadmin_Load);
-            this.MouseEnter += new System.EventHandler(this.frmadmin_MouseEnter);
             this.PanelStaffAdd.ResumeLayout(false);
             this.PanelStaffAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -3300,22 +3330,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxprevousLec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfirstLec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlastLec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnextLec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCourses)).EndInit();
             this.tabControl4.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelRe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridResearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelSpec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridspecialisation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddSpec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagestaff)).EndInit();
             this.panelCourses.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
@@ -3359,16 +3389,16 @@
             this.tabControl5.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuPrevious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuFirst)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuLast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInqStuNext)).EndInit();
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqPrevious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqFirst)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqLast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecInqNext)).EndInit();
             this.SemPanel.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -3412,9 +3442,9 @@
         private System.Windows.Forms.Label labellname;
         private System.Windows.Forms.Label labelfname;
         private System.Windows.Forms.Panel PanelStaffAdd;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker doblec;
         private System.Windows.Forms.PictureBox imagestaff;
-        private System.Windows.Forms.TextBox textemail;
+        private System.Windows.Forms.TextBox textemailLec;
         private System.Windows.Forms.Label labelemail;
         private System.Windows.Forms.Label labelgender;
         private System.Windows.Forms.Panel panelCourses;
@@ -3454,77 +3484,77 @@
         private System.Windows.Forms.Panel InquiriesPanel;
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage11;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.PictureBox pictureBox43;
-        private System.Windows.Forms.PictureBox pictureBox44;
-        private System.Windows.Forms.PictureBox pictureBox45;
-        private System.Windows.Forms.PictureBox pictureBox46;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button btnStuDiscard;
+        private System.Windows.Forms.Button btnStuAccept;
+        private System.Windows.Forms.TextBox textBoxExtraStu;
+        private System.Windows.Forms.PictureBox pbInqStuPrevious;
+        private System.Windows.Forms.PictureBox pbInqStuFirst;
+        private System.Windows.Forms.PictureBox pbInqStuLast;
+        private System.Windows.Forms.PictureBox pbInqStuNext;
+        private System.Windows.Forms.Label labelEmailStu;
+        private System.Windows.Forms.Label labelContactNoStu;
+        private System.Windows.Forms.Label labellnStu;
+        private System.Windows.Forms.Label labelfnStu;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.PictureBox pictureBox47;
-        private System.Windows.Forms.PictureBox pictureBox48;
-        private System.Windows.Forms.PictureBox pictureBox49;
-        private System.Windows.Forms.PictureBox pictureBox50;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.PictureBox pbLecInqPrevious;
+        private System.Windows.Forms.PictureBox pbLecInqFirst;
+        private System.Windows.Forms.PictureBox pbLecInqLast;
+        private System.Windows.Forms.PictureBox pbLecInqNext;
+        private System.Windows.Forms.TextBox txtLecInqSp;
+        private System.Windows.Forms.TextBox txtLecInqRe;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button buttonLecInqDec;
+        private System.Windows.Forms.Button buttonLecInqAccept;
+        private System.Windows.Forms.Label lblLecInqEmail;
+        private System.Windows.Forms.Label lblLecInqCno;
+        private System.Windows.Forms.Label lblLeqInqLn;
+        private System.Windows.Forms.Label lblLecInqFn;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtAmtLec;
+        private System.Windows.Forms.TextBox txtAmtStu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnupdateLecPic;
+        private System.Windows.Forms.ComboBox comboBoxTitle;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxContactNo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.PictureBox pictureBox33;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.PictureBox pictureBoxDelRe;
+        private System.Windows.Forms.DataGridView dataGridResearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textresearch;
         private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.PictureBox pictureBox34;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.PictureBox pictureBoxDelSpec;
+        private System.Windows.Forms.DataGridView dataGridspecialisation;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.PictureBox pictureBox35;
-        private System.Windows.Forms.PictureBox pictureBox42;
-        private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox32;
-        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.TextBox textspec;
+        private System.Windows.Forms.PictureBox pictureBoxAddSpec;
+        private System.Windows.Forms.PictureBox pictureBoxprevousLec;
+        private System.Windows.Forms.PictureBox pictureBoxfirstLec;
+        private System.Windows.Forms.PictureBox pictureBoxlastLec;
+        private System.Windows.Forms.PictureBox pictureBoxnextLec;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton radioButtonFemale;
+        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.DataGridView dataGridCourses;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxLecturer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.GroupBox groupBox1;
