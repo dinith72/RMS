@@ -168,13 +168,13 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.dataGridView12 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewFnalMks = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dataGridViewAddResultsCourse = new System.Windows.Forms.DataGridView();
             this.coloumnCourseId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -273,7 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFnalMks)).BeginInit();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddResultsCourse)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -380,6 +380,7 @@
             this.labelEmail.Size = new System.Drawing.Size(190, 25);
             this.labelEmail.TabIndex = 62;
             this.labelEmail.Text = "XXXXXX@****.com";
+            this.labelEmail.Click += new System.EventHandler(this.labelEmail_Click);
             // 
             // labelName
             // 
@@ -1581,6 +1582,7 @@
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(94, 33);
             this.comboBoxLevel.TabIndex = 3;
+            this.comboBoxLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxLevel_SelectedIndexChanged);
             this.comboBoxLevel.TextChanged += new System.EventHandler(this.comboBoxLevel_TextChanged);
             // 
             // ResultsPanel
@@ -1687,6 +1689,7 @@
             this.pictureBox14.Size = new System.Drawing.Size(36, 37);
             this.pictureBox14.TabIndex = 6;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox13
             // 
@@ -1707,6 +1710,7 @@
             this.pictureBox12.Size = new System.Drawing.Size(36, 37);
             this.pictureBox12.TabIndex = 4;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // label16
             // 
@@ -1775,7 +1779,7 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.button7);
-            this.tabPage6.Controls.Add(this.button6);
+            this.tabPage6.Controls.Add(this.btnUpload);
             this.tabPage6.Controls.Add(this.button5);
             this.tabPage6.Controls.Add(this.groupBox6);
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
@@ -1800,17 +1804,18 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // btnUpload
             // 
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(684, 297);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(216, 60);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "   Upload Results";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnUpload.Image")));
+            this.btnUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpload.Location = new System.Drawing.Point(684, 297);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(216, 60);
+            this.btnUpload.TabIndex = 3;
+            this.btnUpload.Text = "   Upload Results";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // button5
             // 
@@ -1823,13 +1828,14 @@
             this.button5.TabIndex = 2;
             this.button5.Text = "  Check Results";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.pictureBox22);
             this.groupBox6.Controls.Add(this.pictureBox23);
             this.groupBox6.Controls.Add(this.pictureBox24);
-            this.groupBox6.Controls.Add(this.dataGridView12);
+            this.groupBox6.Controls.Add(this.dataGridViewFnalMks);
             this.groupBox6.Location = new System.Drawing.Point(45, 14);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
@@ -1848,6 +1854,7 @@
             this.pictureBox22.Size = new System.Drawing.Size(36, 37);
             this.pictureBox22.TabIndex = 12;
             this.pictureBox22.TabStop = false;
+            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click);
             // 
             // pictureBox23
             // 
@@ -1858,6 +1865,7 @@
             this.pictureBox23.Size = new System.Drawing.Size(36, 37);
             this.pictureBox23.TabIndex = 11;
             this.pictureBox23.TabStop = false;
+            this.pictureBox23.Click += new System.EventHandler(this.pictureBox23_Click);
             // 
             // pictureBox24
             // 
@@ -1869,14 +1877,14 @@
             this.pictureBox24.TabIndex = 10;
             this.pictureBox24.TabStop = false;
             // 
-            // dataGridView12
+            // dataGridViewFnalMks
             // 
-            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Location = new System.Drawing.Point(14, 149);
-            this.dataGridView12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.Size = new System.Drawing.Size(528, 395);
-            this.dataGridView12.TabIndex = 8;
+            this.dataGridViewFnalMks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFnalMks.Location = new System.Drawing.Point(14, 149);
+            this.dataGridViewFnalMks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewFnalMks.Name = "dataGridViewFnalMks";
+            this.dataGridViewFnalMks.Size = new System.Drawing.Size(528, 395);
+            this.dataGridViewFnalMks.TabIndex = 8;
             // 
             // groupBox7
             // 
@@ -2009,10 +2017,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1502, 923);
-            this.Controls.Add(this.ProfilePanel);
-            this.Controls.Add(this.ResultsPanel);
-            this.Controls.Add(this.FeedbackPanel);
             this.Controls.Add(this.AddResultsPanel);
+            this.Controls.Add(this.ProfilePanel);
+            this.Controls.Add(this.FeedbackPanel);
+            this.Controls.Add(this.ResultsPanel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label22);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -2113,7 +2121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFnalMks)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddResultsCourse)).EndInit();
@@ -2176,13 +2184,13 @@
         private System.Windows.Forms.DataGridView dataGridViewAddResultsCourse;
         private System.Windows.Forms.ComboBox comboBoxAddResultsYear;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox24;
-        private System.Windows.Forms.DataGridView dataGridView12;
+        private System.Windows.Forms.DataGridView dataGridViewFnalMks;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridViewYear4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;

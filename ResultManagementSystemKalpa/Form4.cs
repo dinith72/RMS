@@ -24,8 +24,12 @@ namespace ResultManagementSystemKalpa
         private List<string> lecturer = new List<string>();
         private List<string> lecinquiry = new List<string>();
         private List<string> stuinquiry = new List<string>();
+        private List<string> names = new List<string>(); // list of graduation criterias
+        private List<string> criteria = new List<string>(); // list of graduation criterias
         private int stuinqpos = 0;
         private int lecinqpos = 0;
+
+        //GraduationCriteria gc = new GraduationCriteria();
 
 
 
@@ -1898,6 +1902,464 @@ namespace ResultManagementSystemKalpa
         private void buttonLecInqDec_Click(object sender, EventArgs e)
         {
             deleterecordLec();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+           //// MessageBox.Show(textBoxGen1.Name.ToString());
+           // gc.addToList(textBoxGen1.Name.ToString());
+           // MessageBox.Show(gc.sendlist());
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+           for  (int i =0; i < names.Count ;i++)
+            {
+                if(names[i].Contains("gen"))
+                {
+                    char[] temp = names[i].ToCharArray();
+                    general(temp[3],criteria[i]);
+                    
+                }
+                if (names[i].Contains("fcl"))
+                {
+                    char[] temp = names[i].ToCharArray();
+                    firstclass(temp[3], criteria[i]);
+
+                }
+                if (names[i].Contains("scu"))
+                {
+                    char[] temp = names[i].ToCharArray();
+                    secondupper(temp[3], criteria[i]);
+
+                }
+                if (names[i].Contains("scl"))
+                {
+                    char[] temp = names[i].ToCharArray();
+                    secondlower(temp[3], criteria[i]);
+
+                }
+
+            }
+
+            // for the maximum years criteria 
+            Connection con = new Connection();
+            SqlConnection x = con.connect();
+
+        
+
+        }
+         
+        private void general(char chr ,string cri)
+        {
+            // MessageBox.Show(cri.ToString());
+            try
+            {
+                Connection con = new Connection();
+                SqlConnection x = con.connect();
+                SqlCommand cmd = new SqlCommand("update gradCriteria set bscGeneral = @val where reg_no = @reg", x);
+                cmd.Parameters.Add(new SqlParameter("@val", cri));
+                cmd.Parameters.Add(new SqlParameter("@reg", "min" + chr.ToString()));
+                cmd.ExecuteNonQuery();
+                x.Close();
+            }
+            catch (Exception exe)
+            {
+
+                MessageBox.Show(exe.ToString());
+            }
+
+        }
+        private void firstclass(char chr,string cri)
+        {
+            try
+            {
+                Connection con = new Connection();
+                SqlConnection x = con.connect();
+                SqlCommand cmd = new SqlCommand("update gradCriteria set bscFirstClass = @val where reg_no = @reg", x);
+                cmd.Parameters.Add(new SqlParameter("@val", cri));
+                cmd.Parameters.Add(new SqlParameter("@reg", "min" + chr.ToString()));
+                cmd.ExecuteNonQuery();
+                x.Close();
+            }
+            catch (Exception  exe)
+            {
+                MessageBox.Show(exe.ToString());
+
+            }
+        }
+        private void secondupper(char chr, string cri)
+        {
+            try
+            {
+                Connection con = new Connection();
+                SqlConnection x = con.connect();
+                SqlCommand cmd = new SqlCommand("update gradCriteria set bscSecondUpper = @val where reg_no = @reg", x);
+                cmd.Parameters.Add(new SqlParameter("@val", cri));
+                cmd.Parameters.Add(new SqlParameter("@reg", "min" + chr.ToString()));
+                cmd.ExecuteNonQuery();
+                x.Close();
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.ToString());
+
+            }
+        }
+        private void secondlower(char chr, string cri)
+        {
+            try
+            {
+                Connection con = new Connection();
+                SqlConnection x = con.connect();
+                SqlCommand cmd = new SqlCommand("update gradCriteria set bscSecondLower = @val where reg_no = @reg", x);
+                cmd.Parameters.Add(new SqlParameter("@val", cri));
+                cmd.Parameters.Add(new SqlParameter("@reg", "min" + chr.ToString()));
+                cmd.ExecuteNonQuery();
+                x.Close();
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.ToString());
+
+            }
+        }
+
+        private void textBoxGen1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBoxGen2_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxGen1_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBoxGen1.Text))
+            {
+                MessageBox.Show("*"+textBoxGen1.Text+"*");
+                names.Add("gen1");
+                criteria.Add(textBoxGen1.Text); 
+            } 
+            
+        }
+
+         
+        private void textBoxGen2_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBoxGen2.Text))
+            {
+                names.Add("gen2");
+                criteria.Add(textBoxGen2.Text);
+            }
+        }
+
+        private void textBoxGen3_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxGen3.Text))
+            {
+                names.Add("gen3");
+                criteria.Add(textBoxGen3.Text);
+            }
+        }
+
+        private void textBoxGen4_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxGen4.Text))
+            {
+                names.Add("gen4");
+                criteria.Add(textBoxGen4.Text);
+            }
+        }
+
+        private void textBoxGen5_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxGen5.Text))
+            {
+                names.Add("gen5");
+                criteria.Add(textBoxGen5.Text);
+            }
+        }
+
+        private void textBoxGen6_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxGen6.Text))
+            {
+                names.Add("gen6");
+                criteria.Add(textBoxGen6.Text);
+            }
+        }
+
+        private void textBoxGen7_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxGen7.Text))
+            {
+                names.Add("gen7");
+                criteria.Add(textBoxGen7.Text);
+            }
+        }
+
+        private void maskedTextBoxGen_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(maskedTextBoxGen.Text))
+            {
+                names.Add("gen8");
+                criteria.Add(maskedTextBoxGen.Text);
+            }
+        }
+
+        private void textBoxGen8_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxGen9.Text))
+            {
+                names.Add("gen9");
+                criteria.Add(textBoxGen9.Text);
+            }
+        }
+
+        private void textBoxfc1_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc1.Text))
+            {
+                names.Add("fcl1");
+                criteria.Add(textBoxfc1.Text);
+            }
+        }
+
+        private void textBoxfc2_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc2.Text))
+            {
+                names.Add("fcl2");
+                criteria.Add(textBoxfc2.Text);
+            }
+        }
+
+        private void textBoxfc3_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc3.Text))
+            {
+                names.Add("fcl3");
+                criteria.Add(textBoxfc3.Text);
+            }
+        }
+
+        private void textBoxfc4_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc4.Text))
+            {
+                names.Add("fcl4");
+                criteria.Add(textBoxfc4.Text);
+            }
+        }
+
+        private void textBoxfc5_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc5.Text))
+            {
+                names.Add("fcl5");
+                criteria.Add(textBoxfc5.Text);
+            }
+        }
+
+        private void textBoxfc6_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc6.Text))
+            {
+                names.Add("fcl6");
+                criteria.Add(textBoxfc6.Text);
+            }
+        }
+
+        private void textBoxfc7_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc7.Text))
+            {
+                names.Add("fcl7");
+                criteria.Add(textBoxfc7.Text);
+            }
+        }
+
+        private void maskedTextBoxMin_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(maskedTextBoxMin.Text))
+            {
+                names.Add("fcl8");
+                criteria.Add(maskedTextBoxMin.Text);
+            }
+        }
+
+        private void textBoxfc9_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxfc9.Text))
+            {
+                names.Add("fcl9");
+                criteria.Add(textBoxfc9.Text);
+            }
+        }
+
+        private void textBoxsc1_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc1.Text))
+            {
+                names.Add("scu1");
+                criteria.Add(textBoxsc1.Text);
+            }
+        }
+
+        private void textBoxsc2_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc2.Text))
+            {
+                names.Add("scu2");
+                criteria.Add(textBoxsc2.Text);
+            }
+        }
+
+        private void textBoxsc3_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc3.Text))
+            {
+                names.Add("scu3");
+                criteria.Add(textBoxsc3.Text);
+            }
+        }
+
+        private void textBoxsc4_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc4.Text))
+            {
+                names.Add("scu4");
+                criteria.Add(textBoxsc4.Text);
+            }
+
+        }
+
+        private void textBoxsc5_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc5.Text))
+            {
+                names.Add("scu5");
+                criteria.Add(textBoxsc5.Text);
+            }
+        }
+
+        private void textBoxsc6_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc6.Text))
+            {
+                names.Add("scu6");
+                criteria.Add(textBoxsc6.Text);
+            }
+        }
+
+        private void textBoxsc7_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc7.Text))
+            {
+                names.Add("scu7");
+                criteria.Add(textBoxsc7.Text);
+            }
+        }
+
+        private void maskedTextBoxsc_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(maskedTextBoxsc.Text))
+            {
+                names.Add("scu8");
+                criteria.Add(maskedTextBoxsc.Text);
+            }
+        }
+
+        private void textBoxsc8_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxsc9.Text))
+            {
+                names.Add("scu9");
+                criteria.Add(textBoxsc9.Text);
+            }
+        }
+
+        private void textBoxscl1_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl1.Text))
+            {
+                names.Add("scl1");
+                criteria.Add(textBoxscl1.Text);
+            }
+        }
+
+        private void textBoxscl2_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl2.Text))
+            {
+                names.Add("scl2");
+                criteria.Add(textBoxscl2.Text);
+            }
+        }
+
+        private void textBoxscl3_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl3.Text))
+            {
+                names.Add("scl3");
+                criteria.Add(textBoxscl3.Text);
+            }
+        }
+
+        private void textBoxscl4_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl4.Text))
+            {
+                names.Add("scl4");
+                criteria.Add(textBoxscl4.Text);
+            }
+        }
+
+        private void textBoxscl5_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl5.Text))
+            {
+                names.Add("scl5");
+                criteria.Add(textBoxscl5.Text);
+            }
+        }
+
+        private void textBoxscl6_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl6.Text))
+            {
+                names.Add("scl6");
+                criteria.Add(textBoxscl6.Text);
+            }
+        }
+
+        private void textBoxscl7_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl7.Text))
+            {
+                names.Add("scl7");
+                criteria.Add(textBoxscl7.Text);
+            }
+        }
+
+        private void maskedTextBox7_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(maskedTextBox7.Text))
+            {
+                names.Add("scl8");
+                criteria.Add(maskedTextBox7.Text);
+            }
+        }
+
+        private void textBoxscl9_Leave(object sender, EventArgs e)
+        {
+            if ( !string.IsNullOrWhiteSpace(textBoxscl9.Text))
+            {
+                names.Add("scl9");
+                criteria.Add(textBoxscl9.Text);
+            }
         }
     }
 }

@@ -11,6 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+// for excel functions
+using excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop;
+using System.Data.OleDb;
 
 namespace ResultManagementSystemKalpa
 {
@@ -28,6 +32,7 @@ namespace ResultManagementSystemKalpa
             InitializeComponent();
             getxUserName();
             loaddata();
+            
             loadcombo();
             comboBoxViewResultsYear.Hide(); // hides the combo box for acdamic results in view results pannel
 
@@ -45,12 +50,13 @@ namespace ResultManagementSystemKalpa
         private void loadcombo()
             // this program loads the acadamic years to the combo box in results pannel
         {
+           // MessageBox.Show("load");
             try
             {
 
                 Connection conObj = new Connection();
                 SqlConnection x = conObj.connect();
-                SqlCommand cmd = new SqlCommand("select distinct t.acadamic_year from take_course t ; ", x);
+                SqlCommand cmd = new SqlCommand("select distinct r.acadamic_year from RESULTS r", x);
                 SqlDataReader sdr = cmd.ExecuteReader();
                 while (sdr.Read())
                 {
@@ -251,10 +257,20 @@ namespace ResultManagementSystemKalpa
 
         private void feedbackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FeedbackPanel.BringToFront();
-            loadFeedbackDetails('1',dataGridViewYear1);
-            //MessageBox.Show(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
-            loadRatings(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
+
+            try
+            {
+                FeedbackPanel.BringToFront();
+                loadFeedbackDetails('1', dataGridViewYear1);
+                //MessageBox.Show(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
+                loadRatings(dataGridViewYear1.Rows[0].Cells[0].Value.ToString());
+            }
+            catch (Exception exe)
+            {
+
+                
+            }
+                
 
         }
         // load the course details to the left data grid
@@ -307,6 +323,7 @@ namespace ResultManagementSystemKalpa
         private void checkResultsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ResultsPanel.BringToFront();
+            loadcombo();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -659,65 +676,79 @@ namespace ResultManagementSystemKalpa
         }
         private void update()
         {
-            string[] curseid = new string[50];
-            string[] cursename = new string[50];
-            int i = 0;
-            int j = 0;
+            
+            List<string> curseid = new List<string>() ;
+            List<string> cursename = new List<string>();
+
+           
 
             string level = comboBoxLevel.SelectedItem.ToString();
             string acyear = comboBoxViewResultsYear.SelectedItem.ToString();
+            MessageBox.Show("update");
 
             try
             {
                 Connection conn = new Connection();
                 SqlConnection x = conn.connect();
-                SqlCommand cmd = new SqlCommand("select distinct c.course_id from lecturer l , courses c, take_course t " +
-                    "where l.lec_id =@id and c.acadamic_level =@al and t.acadamic_year =@ay " +
-                    "and l.lec_id = c.lec_id and c.course_id = t.course_id; ", x);
+                //SqlCommand cmd = new SqlCommand("select distinct c.course_id from lecturer l , courses c, take_course t " +
+                  //"where l.lec_id =@id and c.acadamic_level =@al and t.acadamic_year =@ay " +
+                  //"and l.lec_id = c.lec_id and c.course_id = t.course_id; ", x);
+
+                SqlCommand cmd = new SqlCommand("select distinct c.course_id  from lecturer l , courses c, RESULTS r " +
+                    "where l.lec_id =@id and c.acadamic_level =@al and r.acadamic_year =@ay " +
+                    "and l.lec_id = c.lec_id and c.course_id = r.CourseID " , x);
 
                 cmd.Parameters.Add(new SqlParameter("@id", username.ToString()));
                 cmd.Parameters.Add(new SqlParameter("@al", comboBoxLevel.SelectedItem.ToString()));
-                cmd.Parameters.Add(new SqlParameter("@ay", comboBoxViewResultsYear.SelectedItem.ToString()));
+               cmd.Parameters.Add(new SqlParameter("@ay", comboBoxViewResultsYear.SelectedItem.ToString()));
 
                 SqlDataReader rdr = cmd.ExecuteReader();
 
 
-                while (rdr.Read() && i < 50)
+                while (rdr.Read())
                 {
-                    curseid[i] = rdr.GetValue(0).ToString();
-                    j++;
+                    curseid.Add(rdr.GetValue(0).ToString());
+                    //MessageBox.Show("**" + curseid[j] + "**");
+
+                    
+                    
                 }
                 rdr.Close();
 
 
 
-                for (i = 0; i < j; i++)
+                foreach (string cid in curseid)
                 {
-                    SqlCommand cmd1 = new SqlCommand("select c.course_name from courses c where c.course_id = @id", x);
-                    cmd1.Parameters.Add(new SqlParameter("@id", curseid[i].ToString()));
+                    SqlCommand cmd1 = new SqlCommand("select c.course_name from courses c where c.course_id =@id", x);
+                    cmd1.Parameters.Add(new SqlParameter("@id", cid.ToString()));
                     SqlDataReader rdr1 = cmd1.ExecuteReader();
                     while (rdr1.Read())
                     {
-                        cursename[i] = rdr1.GetValue(0).ToString();
+                        cursename.Add(rdr1.GetValue(0).ToString());
+                        //MessageBox.Show("**" + cursename[i] + "**");
                     }
 
 
                     rdr1.Close();
-                    //MessageBox.Show(curseid[i] + "   " + cursename[i]);
+                    
                 }
 
 
-                for (i = 0; i < j; i++)
+                int r = 0;
+                foreach(string cid in curseid)
                 {
-                    dataGridViewViewResultsCourse.Rows[i].Cells[0].Value = curseid[i].ToString();
-                    dataGridViewViewResultsCourse.Rows[i].Cells[1].Value = cursename[i].ToString();
+                    MessageBox.Show(cid);
+                    dataGridViewViewResultsCourse.Rows.Add(cid,cursename[r]);
+                    r++;
+                    //dataGridViewViewResultsCourse.Rows[i].Cells[1].Value = cid.ToString();
+
                 }
                 x.Close(); 
 
             }
             catch (Exception exe1)
             {
-                MessageBox.Show(exe1.Message);
+                MessageBox.Show(exe1.ToString());
 
             }
         }
@@ -726,6 +757,8 @@ namespace ResultManagementSystemKalpa
         {
             dataGridViewViewResultsCourse.Rows.Clear();
             dataGridViewStudents.Rows.Clear();
+            //comboBoxViewResultsYear.Show();
+             //Update();
             if (comboBoxViewResultsYear.SelectedItem == null)
                 comboBoxViewResultsYear.Show();
             else
@@ -734,9 +767,10 @@ namespace ResultManagementSystemKalpa
 
         private void dataGridViewViewResultsCourse_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           // MessageBox.Show(dataGridViewViewResultsCourse.SelectedCells[0].Value.ToString());
+            // MessageBox.Show(dataGridViewViewResultsCourse.SelectedCells[0].Value.ToString());
             //MessageBox.Show(dataGridViewViewResultsCourse.CurrentCell.ColumnIndex.ToString());
             //if (dataGridViewViewResultsCourse.SelectedCells[0].GetType.)
+            dataGridViewStudents.Rows.Clear();
             try
             {
                 
@@ -745,16 +779,12 @@ namespace ResultManagementSystemKalpa
                 SqlCommand cmd;
                 if (dataGridViewViewResultsCourse.CurrentCell.ColumnIndex.ToString() == "0")
                 {
-                    cmd = new SqlCommand("select s.stu_number , s.first_name ,s.last_name , t.result" +
-                        " from Student s , take_course t " +
-                        "where t.course_id =@id and s.stu_number = t.stu_number ", x);
+                    cmd = new SqlCommand("select s.StNo , s.firstName,s.lastName ,r.Grade from Student s, RESULTS r where  r.CourseID =@id and s.StNo = r.StNo", x);
                     cmd.Parameters.Add(new SqlParameter("@id", dataGridViewViewResultsCourse.SelectedCells[0].Value.ToString()));
                 }
                 else
                 {
-                    cmd = new SqlCommand("select s.stu_number , s.first_name ,s.last_name , t.result " +
-                        "from Student s , take_course t, courses c where  c.course_name like @curse " +
-                        "and s.stu_number = t.stu_number and t.course_id = c.course_id", x);
+                    cmd = new SqlCommand("select s.StNo , s.firstName,s.lastName ,r.Grade from Student s, RESULTS r where  r.CourseID =@curse and s.StNo = r.StNo", x);
                     cmd.Parameters.Add(new SqlParameter("@curse", dataGridViewViewResultsCourse.SelectedCells[0].Value.ToString()));
                 }
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -785,7 +815,7 @@ namespace ResultManagementSystemKalpa
             }
             catch (Exception exe)
             {
-                MessageBox.Show(exe.Message);
+                MessageBox.Show(exe.ToString());
             }
         }
 
@@ -826,7 +856,7 @@ namespace ResultManagementSystemKalpa
 
         private void dataGridViewAddResultsCourse_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //dataGridViewFnalMks.Rows.Clear();
         }
 
         private void dataGridViewYear1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1102,6 +1132,195 @@ namespace ResultManagementSystemKalpa
         }
 
         private void textBoxspecialise_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string location = "";
+            OpenFileDialog fd = new OpenFileDialog();
+            if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                location = fd.FileName;
+            }
+            try
+            {
+                var exapp = new excel.Application();
+                exapp.Visible = true;
+                exapp.Workbooks.Open(location);
+
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.ToString());
+            }
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            //dataGridViewFnalMks.Rows.Clear();
+            DataTable mks = new DataTable();
+            string location = "";
+            OpenFileDialog fd = new OpenFileDialog();
+            if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                location = fd.FileName;
+            }
+            try
+            {
+                OleDbConnection excon = new OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + location + ";Extended Properties=Excel 8.0;");
+                OleDbDataAdapter adap = new OleDbDataAdapter("select [Student Number] , [final marks] from[Sheet1$]", excon);
+                adap.Fill(mks);
+                mks.Columns.Add("grade", typeof(System.String));
+                foreach(DataRow dr in mks.Rows)
+                {
+                    if (Convert.ToInt32(dr[1]) >= 85)
+                        dr["grade"] = "A+";
+
+                   else  if (Convert.ToInt32(dr[1]) >= 70)
+                        dr["grade"] = "A";
+
+                   else if (Convert.ToInt32(dr[1]) >= 65)
+                        dr["grade"] = "A-";
+
+                    else if (Convert.ToInt32(dr[1]) >= 60)
+                        dr["grade"] = "B+";
+
+                    else if (Convert.ToInt32(dr[1]) >= 55)
+                        dr["grade"] = "B";
+
+                    else if (Convert.ToInt32(dr[1]) >= 50)
+                        dr["grade"] = "B-";
+
+                    else if (Convert.ToInt32(dr[1]) >= 45)
+                        dr["grade"] = "C+";
+
+                    else if (Convert.ToInt32(dr[1]) >= 40)
+                        dr["grade"] = "C";
+
+                    else if (Convert.ToInt32(dr[1]) >= 35)
+                        dr["grade"] = "C-";
+
+                    else if (Convert.ToInt32(dr[1]) >= 30)
+                        dr["grade"] = "D+";
+                    else if (Convert.ToInt32(dr[1]) >= 25)
+                        dr["grade"] = "D";
+                    else
+                        dr["grade"] = "D-";
+
+
+                }
+                dataGridViewFnalMks.DataSource = mks;
+
+            }
+            catch  (System.Data.OleDb.OleDbException ex1 )
+            {
+                MessageBox.Show("pls select 2003 excel version ");
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.ToString());
+            }
+        }
+
+        private void pictureBox23_Click(object sender, EventArgs e)
+        {
+            int r = 0;
+            //MessageBox.Show(comboBoxAddResultsYear.SelectedIndex.ToString());
+            //MessageBox.Show(dataGridViewAddResultsCourse.CurrentCell.RowIndex.ToString());
+
+            try
+             {
+                    Connection conObj = new Connection();
+                    SqlConnection x = conObj.connect();
+               
+
+
+
+                foreach (DataGridViewRow row in dataGridViewFnalMks.Rows)
+                    {
+                        try
+                         {
+                        SqlCommand cmd = new SqlCommand("insert into RESULTS(CourseID ,StNo ,acadamic_year,Grade) " +
+                       "values(@cid, @sid, @ay, @gr) ", x);
+                        //MessageBox.Show(r.ToString());
+                            cmd.Parameters.Add(new SqlParameter("@cid", dataGridViewAddResultsCourse.CurrentCell.Value.ToString()));
+                             //MessageBox.Show(dataGridViewAddResultsCourse.CurrentCell.Value.ToString());
+                            cmd.Parameters.Add(new SqlParameter("@ay", Convert.ToInt32(comboBoxAddResultsYear.Text)));
+                            //MessageBox.Show(comboBoxAddResultsYear.Text);
+                            cmd.Parameters.Add(new SqlParameter("@sid", dataGridViewFnalMks[0,r].Value.ToString()));
+                            //MessageBox.Show(dataGridViewFnalMks[0, r].Value.ToString());
+                            //char [] grade = .ToCharArray();
+                            cmd.Parameters.Add(new SqlParameter("@gr", dataGridViewFnalMks[2, r].Value.ToString()));
+                           
+                            cmd.ExecuteNonQuery();
+                            dataGridViewFnalMks.Rows.RemoveAt(r);
+                            r++;
+                            
+                         }
+                        catch (System.Data.SqlClient.SqlException sql)
+                        {
+                        //MessageBox.Show(sql.ToString());
+                        MessageBox.Show("you have already added the result row number " + (r + 1) + "to the list");
+                          r++;
+                        }
+                         
+                    }
+                        x.Close();
+                         MessageBox.Show("addition of data is complete ");
+            }
+            
+                catch(System.NullReferenceException nulexe)
+            {
+                if (comboBoxAddResultsYear.SelectedIndex == -1 )
+                    MessageBox.Show("please fill acadamic year  ");
+
+                if (dataGridViewAddResultsCourse.SelectedCells.Count == 0)
+                    MessageBox.Show("please select the relavant course");
+            }
+                catch (Exception exe)
+                {
+                    Console.Out.WriteLine(exe.ToString());
+                }
+                
+
+            
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
+
+        {
+            try
+            {
+                dataGridViewFnalMks.Rows.RemoveAt(dataGridViewFnalMks.SelectedRows[0].Index);
+            }
+            catch(IndexOutOfRangeException ioexe )
+            {
+                MessageBox.Show("please select the correct row");
+            }
+            catch(Exception exe )
+            {
+
+            }
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
         {
 
         }
